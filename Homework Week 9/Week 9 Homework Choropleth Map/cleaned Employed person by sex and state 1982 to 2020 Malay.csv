@@ -1,5 +1,4 @@
-State/Country,Employed ('000)
-,sum
+State/Country,sum_employed
 Johor,43534.89999999998
 Kedah,23723.69999999999
 Kelantan,17419.3
