@@ -1,22 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Active Cases (10 Oct 2020)",
+  "title": "Employed person by sex and state 1982 2020 Malaysia",
   "width": 800,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
-    "format": {
-          "type": "topojson",
-          "feature": "ne_110m_admin_0_countries"
-        }
-  },
+    "name": "malaysia_map",
+    "url": "https://github.com/daniel-gus/FIT3179/blob/fe56baa705bbddd426da0c12728cd09cb22f22e0/Additional%20Data%20Files/state_boundaries.json",
+    "format": {"property": "features"}
+},
   "transform": [{
-      "lookup": "properties.NAME",
+      "lookup": "properties.state/country",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/3_choropleth_map/data/covid_10_10_2020.csv"
+          "url": "https://github.com/daniel-gus/FIT3179/blob/fe56baa705bbddd426da0c12728cd09cb22f22e0/Visualisation%202%20Datasets/Employed%20person%20by%20sex%20and%20state%201982%20%20%202020%20Malay.csv"
         },
-        "key": "Country",
+        "key": "State/Country",
         "fields": ["Active"]
       }
     },
