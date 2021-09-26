@@ -5,14 +5,15 @@
   "height": 600,
   "data": {
     "name": "malaysia_map",
-    "url": "https://github.com/daniel-gus/FIT3179/blob/80b193f8dc755dd329d38010ef7a78b54c0e266d/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
     "format": {"property": "features"}
 },
   "transform": [{
       "lookup": "properties.state",
       "from": {
         "data": {
-          "url": "https://github.com/daniel-gus/FIT3179/blob/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+          "name": "state_population",
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/state_population.json"
         },
         "key": "state",
         "fields": ["sum_employed(.000)"]
