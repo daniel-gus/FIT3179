@@ -34,8 +34,8 @@
       "scale": {"type": "log"}
     },
     "tooltip": [
-      {"field": "properties.state", "type": "nominal", "title": "state"},
-      {"field": "sum_employed(.000)", "type": "quantitative", "title": "sum_employed(.000)"}
+      {"field": "state", "title": "state"},
+      {"field": "Sum_employed", "type": "quantitative", "title": "sum_employed(.000)"}
     ]
   },
 
