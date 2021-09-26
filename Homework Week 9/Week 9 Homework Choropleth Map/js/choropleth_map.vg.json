@@ -1,63 +1,43 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-      "text":  "Employed person by sex and state 1982 2020 Malaysia",
-      "align": "center"
-  },
+  "title": "Employed person by sex and state 1982 2020 Malaysia",
+  "width": 800,
+  "height": 600,
   "data": {
-      "name": "malaysia_map",
-      "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
-      "format": {"property": "features"}
-  },
+    "name": "malaysia_map",
+    "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
+    "format": {"property": "features"}
+},
   "transform": [{
       "lookup": "properties.state",
       "from": {
-          "data": {
-              "name": "state_employedpopulation",
-              "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
-          },
-          "key": "state",
-          "fields": ["state", "sum_employed(.000)"]
+        "data": {
+          "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+        },
+        "key": "state",
+        "fields": ["state", "sum_employed(.000)"]
       }
-  },
-  {
-      "calculate": "datum.sum_employed(.000) + 0.1", "as": "Sum_employed"
-  }],
-  "encoding": {
-      "color": {
-          "condition": {
-              "selection": "click",
-              "field": "population_density",
-              "type": "quantitative",
-              "scale": {"type": "log", "scheme": "yellowgreenblue"},
-              "legend": {"title": "Population Density", "direction": "horizontal"}
-          },
-          "value": "lightgray"
-      },
-      "tooltip": [
-          {
-              "field": "state", 
-              "title": "State"
-          },
-          {
-              "field": "population_density",
-              "type": "quantitative",
-              "title": "Population Density"
-          }
-      ]
+    },
+    {"calculate": "datum.sum_employed(.000) + 0.1", "as": "Sum_employed"}
+  ],
+  "projection": {
+    "type": "equirectangular"
   },
   "mark": {
-      "type": "geoshape",
-      "stroke": "#000000",
-      "strokeWidth": 0.5
-  },
-  "selection": {"click": {"fields": ["state"], "type": "single"}},
-  "width": 500,
-  "height": 250,
-  "projection": {"type": "mercator"},
-  "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
+    "type": "geoshape"
+    },
+  "encoding": {
+    "color": {
+      "field": "Active Cases",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+      {"field": "Active", "type": "quantitative"}
+    ]
   }
+
+
+  
 }
