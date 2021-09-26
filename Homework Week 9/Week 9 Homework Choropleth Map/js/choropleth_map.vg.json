@@ -6,7 +6,7 @@
   "data": {
     "name": "malaysia_map",
     "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
-    "format": {"property": "features"}
+    "format": {"property": "Feature"}
 },
   "transform": [{
       "lookup": "properties.state",
