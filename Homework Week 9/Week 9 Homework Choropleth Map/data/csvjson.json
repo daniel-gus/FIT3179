@@ -1,0 +1,66 @@
+[
+  {
+    "state": "W.P. Kuala Lumpur",
+    "sum_employed(.000)": 24906.400000000005
+  },
+  {
+    "state": "W.P Labuan",
+    "sum_employed(.000)": 1064.9999999999998
+  },
+  {
+    "state": "W.P.Putrajaya",
+    "sum_employed(.000)": 390.79999999999995
+  },
+  {
+    "state": "Johor",
+    "sum_employed(.000)": 43534.89999999998
+  },
+  {
+    "state": "Kedah",
+    "sum_employed(.000)": 23723.69999999999
+  },
+  {
+    "state": "Kelantan",
+    "sum_employed(.000)": 17419.3
+  },
+  {
+    "state": "Melaka",
+    "sum_employed(.000)": 10140.500000000004
+  },
+  {
+    "state": "Negeri Sembilan",
+    "sum_employed(.000)": 12707.299999999997
+  },
+  {
+    "state": "Pahang",
+    "sum_employed(.000)": 18308.000000000004
+  },
+  {
+    "state": "Penang",
+    "sum_employed(.000)": 22929.4
+  },
+  {
+    "state": "Perak",
+    "sum_employed(.000)": 29573.699999999993
+  },
+  {
+    "state": "Perlis",
+    "sum_employed(.000)": 2862.5000000000014
+  },
+  {
+    "state": "Sabah",
+    "sum_employed(.000)": 39727.899999999994
+  },
+  {
+    "state": "Sarawak",
+    "sum_employed(.000)": 33534.299999999996
+  },
+  {
+    "state": "Selangor",
+    "sum_employed(.000)": 69473.20000000001
+  },
+  {
+    "state": "Terengganu",
+    "sum_employed(.000)": 12011.699999999999
+  }
+]
