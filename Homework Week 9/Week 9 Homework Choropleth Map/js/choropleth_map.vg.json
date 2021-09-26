@@ -9,13 +9,13 @@
     "format": {"property": "features"}
 },
   "transform": [{
-      "lookup": "properties.state/country",
+      "lookup": "properties.state",
       "from": {
         "data": {
           "url": "https://github.com/daniel-gus/FIT3179/blob/d84be31f3b94d7d1c6e828a525cf04a221403e17/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
         },
-        "key": "State/Country",
-        "fields": ["Active"]
+        "key": "state",
+        "fields": ["state", "sum_employed(.000)"]
       }
     },
     {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
