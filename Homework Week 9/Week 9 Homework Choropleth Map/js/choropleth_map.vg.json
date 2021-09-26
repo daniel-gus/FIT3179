@@ -1,13 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
   "title": "Employed person by sex and state 1982 2020 Malaysia",
+
   "width": 800,
+
   "height": 600,
+
   "data": {
     "name": "malaysia_map",
     "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
     "format": {"property": "features"}
-},
+  },
+
   "transform": [{
       "lookup": "properties.state",
       "from": {
@@ -16,11 +21,12 @@
           "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/state_population.json"
         },
         "key": "state",
-        "fields": ["sum_employed(.000)"]
+        "fields": ["state", "sum_employed(.000)"]
       }
     },
     {"calculate": "datum.sum_employed(.000) + 0.1", "as": "Sum_employed"}
   ],
+
   "encoding": {
     "color": {
       "field": "Sum_employed",
@@ -28,24 +34,23 @@
       "scale": {"type": "log"}
     },
     "tooltip": [
-      {"field": "state", "type": "nominal", "title": "state"},
+      {"field": "properties.state", "type": "nominal", "title": "state"},
       {"field": "sum_employed(.000)", "type": "quantitative", "title": "sum_employed(.000)"}
     ]
   },
+
   "mark": {
     "type": "geoshape",
     "stroke": "#000000",
     "strokeWidth": 0.5
   },
+
   "projection": {
     "type": "equirectangular"
   },
+
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}
-  }
-  
-
-
-  
+  }  
 }
