@@ -11,7 +11,7 @@
           }
     },
     "transform": [{
-        "lookup": "properties.state",
+        "lookup": "properties.STATE",
         "from": {
           "data": {
             "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
