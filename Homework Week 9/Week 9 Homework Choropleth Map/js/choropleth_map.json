@@ -1,16 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
   "title": "Employed person by sex and state 1982 2020 Malaysia",
-
   "width": 800,
-
   "height": 600,
 
   "data": {
     "name": "malaysia_map",
-    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries.json",
-    "format": {"property": "features"}
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/js/state_boundaries_topojson.json",
+    "format": {"type": "topojson", "feature": "state_boundaries"}
   },
 
   "transform": [{
@@ -18,7 +15,7 @@
       "from": {
         "data": {
           "name": "state_population",
-          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/state_population.json"
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Homework%20Week%209/Week%209%20Homework%20Choropleth%20Map/data/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
         },
         "key": "state",
         "fields": ["state", "sum_employed(.000)"]
