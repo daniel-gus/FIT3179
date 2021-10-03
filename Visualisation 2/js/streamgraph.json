@@ -3,7 +3,7 @@
     "width": 300, "height": 200,
     "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed_persons_by_occupation_and_state_1982_2020.json"},
     "transform": [
-        {"filter": "datum.Year == 2020"}
+        {"filter": "datum.Country/State == 'JOHOR'"}
     ],
     "mark": "area",
     "encoding": {
