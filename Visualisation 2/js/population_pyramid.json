@@ -20,7 +20,7 @@
             "field": "State/Country", "axis": null, "sort": "descending"
         },
         "x": {
-            "aggregate": "sum", "field": "Employed ('000)",
+            "aggregate": "sum", "field": "Employed",
             "title": "population",
             "axis": {"format": "s"},
             "sort": "descending"
@@ -54,7 +54,7 @@
             "axis": null, "sort": "descending"
         },
         "x": {
-            "aggregate": "sum", "field": "Employed ('000)",
+            "aggregate": "sum", "field": "Employed",
             "title": "population",
             "axis": {"format": "s"}
         },
