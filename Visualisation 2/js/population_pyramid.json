@@ -6,6 +6,7 @@
     },
     "transform": [
         {"filter": "datum.Year == 2020"},
+        {"filter": "datum.State != 'Malaysia'"},
         {"calculate": "datum.Sex == 'Male' ? 'Male' : 'Female'", "as": "gender"}
     ],
     "spacing": 0,
@@ -40,7 +41,7 @@
         },
         "encoding": {
             "y": {"field": "State", "type": "nominal", "axis": null, "sort": "descending"},
-            "text": {"field": "State", "type": "quantitative"}
+            "text": {"field": "State", "type": "nominal"}
         }
     }, {
         "transform": [{

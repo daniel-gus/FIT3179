@@ -1,4 +1,4 @@
-﻿_id,Year,Country/State,Classification,Occupation,Person ('000)
+﻿_id,Year,State,Classification,Occupation,Person
 1,2020,MALAYSIA,Malaysia Standard Classification of Occupations (MASCO) 2013,Managers,808.4
 2,2020,MALAYSIA,Malaysia Standard Classification of Occupations (MASCO) 2013,Professionals,1867.7
 3,2020,MALAYSIA,Malaysia Standard Classification of Occupations (MASCO) 2013,Technicians and associate professionals,1547.2
