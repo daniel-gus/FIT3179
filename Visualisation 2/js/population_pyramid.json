@@ -17,7 +17,7 @@
         "mark": "bar",
         "encoding": {
         "y": {
-            "field": "State/Country", "axis": null, "sort": "descending"
+            "field": "State", "axis": null, "sort": "descending"
         },
         "x": {
             "aggregate": "sum", "field": "Employed",
@@ -39,8 +39,8 @@
         "align": "center"
         },
         "encoding": {
-            "y": {"field": "State/Country", "type": "nominal", "axis": null, "sort": "descending"},
-            "text": {"field": "State/Country", "type": "quantitative"}
+            "y": {"field": "State", "type": "nominal", "axis": null, "sort": "descending"},
+            "text": {"field": "State", "type": "quantitative"}
         }
     }, {
         "transform": [{
@@ -50,7 +50,7 @@
         "mark": "bar",
         "encoding": {
         "y": {
-            "field": "State/Country", "title": null,
+            "field": "State", "title": null,
             "axis": null, "sort": "descending"
         },
         "x": {
