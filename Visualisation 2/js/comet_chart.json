@@ -3,8 +3,8 @@
     "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20persons%20by%20marital%20status%20and%20state%20Malaysia.csv"},
     "title": "Employed Persons by Marital Status",
     "transform": [
-      {"pivot": "Year", "value": "Person('000)", "groupby": ["Marital Status", "Country/State"]},
-      {"fold": ["1982", "2020"], "as": ["Year", "Person('000)"]},
+      {"pivot": "Year", "value": "Person", "groupby": ["Marital Status", "State"]},
+      {"fold": ["1982", "2020"], "as": ["Year", "Person"]},
       {"calculate": "toNumber(datum.Year)", "as": "Year"},
       {"calculate": "datum['2020'] - datum['1982']", "as": "delta"}
     ],
@@ -13,20 +13,20 @@
       "x": {"field": "Year", "title": null},
       "y": {"field": "Marital Status", "title": "Marital Status"},
       "size": {
-        "field": "Person('000)",
+        "field": "Person",
         "type": "quantitative",
         "scale": {"range": [0, 12]},
         "legend": {"values": [20, 60]},
-        "title": "Person('000)"
+        "title": "Person"
       },
-      "tooltip": [{"field": "Year", "type": "quantitative"}, {"field": "Person('000)"}],
+      "tooltip": [{"field": "Year", "type": "quantitative"}, {"field": "Person"}],
       "color": {
         "field": "delta",
         "type": "quantitative",
         "scale": {"domainMid": 0},
         "title": "Delta (%)"
       },
-      "column": {"field": "Country/State", "title": "Country/State"}
+      "column": {"field": "State", "title": "State"}
     },
     "view": {"stroke": null},
     "config": {"legend": {"orient": "bottom", "direction": "horizontal"}}
