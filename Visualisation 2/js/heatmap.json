@@ -1,9 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "data/seattle-weather.csv"
+        "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20persons%20by%20age%20group%20and%20state%201982%202020.csv"
     },
-    "title": "Daily Max Temperatures (C) in Seattle, WA",
+    "transform": [
+        {"filter": "datum.Year == 2020"},
+        {"filter": "datum.Age Group != 'Total'"}
+    ],
+    "title": "Employed Population by Age Group and State",
     "config": {
         "view": {
             "strokeWidth": 0,
@@ -16,27 +20,24 @@
     "mark": "rect",
     "encoding": {
         "x": {
-            "field": "date",
-            "timeUnit": "date",
-            "type": "ordinal",
-            "title": "Day",
-            "axis": {
-                "labelAngle": 0,
-                "format": "%e"
-            }
+            "field": "Country/State",
+            "type": "nominal",
+            "title": "Country/State",
+            "scale": {"domain": ["MALAYSIA", "JOHOR", "KEDAH", "MELAKA", "NEGERI SEMBILAN", "PAHANG", "PULAU PINANG", "PERAK", "PERLIS", "SELANGOR", "TERENGGANU", "SABAH", "SARAWAK","W.P.KUALA LUMPUR", "W.P.LABUAN", "W.P.PUTRAJAYA"]},
+            "axis": {"labelAngle": -45}
         },
         "y": {
-            "field": "date",
-            "timeUnit": "month",
+            "field": "Age Group",
             "type": "ordinal",
-            "title": "Month"
+            "title": "Age Group",
+            "scale": {"domain": ["60–64", "55–59", "50–54", "45–49", "40–44", "35–39", "30–34", "25–29", "20–24", "15–19"]}
         },
         "color": {
-            "field": "temp_max",
-            "aggregate": "max",
+            "field": "Person",
             "type": "quantitative",
+            "scale": {"type": "log"},
             "legend": {
-                "title": null
+                "title": "Person"
             }
         }
     }
