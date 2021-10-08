@@ -43,20 +43,38 @@
         "title": "Female",
         "mark": "bar",
         "encoding": {
-        "y": {
-            "field": "State", "axis": null, "sort": "descending"
-        },
-        "x": {
-            "aggregate": "sum", "field": "Employed",
-            "title": "population",
-            "axis": {"format": "s"},
-            "sort": "descending"
-        },
-        "color": {
-            "field": "gender",
-            "scale": {"range": ["#675193", "#ca8861"]},
-            "legend": null
-        }
+            "y": {
+                "field": "State", "axis": null, "sort": "descending"
+            },
+            "x": {
+                "aggregate": "sum", "field": "Employed",
+                "title": "population",
+                "axis": {"format": "s"},
+                "sort": "descending"
+            },
+            "color": {
+                "field": "gender",
+                "scale": {"range": ["#675193", "#ca8861"]},
+                "legend": null
+            },
+            "tooltip": [
+                {
+                    "field": "Year",
+                    "title": "Year",
+                    "type": "ordinal"
+                },
+                {
+                    "field": "State",
+                    "title": "State",
+                    "type": "nominal"
+                },
+                {
+                    "field": "Employed",
+                    "title": "Number of Employed Female Population",
+                    "type": "quantitative",
+                    "format": ","
+                }
+            ]
         }
     }, {
         "width": 20,
@@ -88,7 +106,25 @@
         "color": {
             "field": "gender",
             "legend": null
-        }
+        },
+        "tooltip": [
+            {
+                "field": "Year",
+                "title": "Year",
+                "type": "ordinal"
+            },
+            {
+                "field": "State",
+                "title": "State",
+                "type": "nominal"
+            },
+            {
+                "field": "Employed",
+                "title": "Number of Employed Male Population",
+                "type": "quantitative",
+                "format": ","
+            }
+        ]
         }
     }],
     "config": {
