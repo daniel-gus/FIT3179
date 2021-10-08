@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20persons%20by%20marital%20status%20and%20state%20Malaysia.csv"},
+  "description": "Slope graph.",
+  "transform": [
+    {"filter": "datum.Year == 2020"},
+    {"filter": "datum.State != 'MALAYSIA'"},
+    {"filter": "datum.Marital Status != 'Total'"}
+],
+  "mark": "line",
+  "width": {"step": 50},
+  "encoding": {
+    "x": {
+      "field": "Marital Status",
+      "type": "nominal",
+      "scale": {"padding": 0.5}
+    },
+    "y": {
+      "aggregate": "median",
+      "field": "Person",
+      "type": "quantitative"
+    },
+    "color": {"field": "State", "type": "nominal"}
+  }
+}
