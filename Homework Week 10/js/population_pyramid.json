@@ -1,0 +1,73 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Population Pyramid of Employed Persons by Gender",
+    "data": {
+        "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+    },
+    "transform": [
+        {"filter": "datum.Year == 2020"},
+        {"filter": "datum.State != 'Malaysia'"},
+        {"calculate": "datum.Employed * 1000" , "as": "Employed"},
+        {"calculate": "datum.Sex == 'Male' ? 'Male' : 'Female'", "as": "gender"}
+    ],
+    "spacing": 0,
+    "hconcat": [{
+        "transform": [{
+            "filter": {"field": "gender", "equal": "Female"}
+        }],
+        "title": "Female",
+        "mark": "bar",
+        "encoding": {
+        "y": {
+            "field": "State", "axis": null, "sort": "descending"
+        },
+        "x": {
+            "aggregate": "sum", "field": "Employed",
+            "title": "population",
+            "axis": {"format": "s"},
+            "sort": "descending"
+        },
+        "color": {
+            "field": "gender",
+            "scale": {"range": ["#675193", "#ca8861"]},
+            "legend": null
+        }
+        }
+    }, {
+        "width": 20,
+        "view": {"stroke": null},
+        "mark": {
+        "type": "text",
+        "align": "center"
+        },
+        "encoding": {
+            "y": {"field": "State", "type": "nominal", "axis": null, "sort": "descending"},
+            "text": {"field": "State", "type": "nominal"}
+        }
+    }, {
+        "transform": [{
+        "filter": {"field": "gender", "equal": "Male"}
+        }],
+        "title": "Male",
+        "mark": "bar",
+        "encoding": {
+        "y": {
+            "field": "State", "title": null,
+            "axis": null, "sort": "descending"
+        },
+        "x": {
+            "aggregate": "sum", "field": "Employed",
+            "title": "population",
+            "axis": {"format": "s"}
+        },
+        "color": {
+            "field": "gender",
+            "legend": null
+        }
+        }
+    }],
+    "config": {
+        "view": {"stroke": null},
+        "axis": {"grid": false}
+    }
+   }
