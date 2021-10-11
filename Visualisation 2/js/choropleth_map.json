@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Employed Population in Malaysia",
-    "width": 800,
-    "height": 600,
+    "width": 550,
+    "height": 400,
     "data": {
       "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/js/state_boundaries_topojson.json",
       "format": {
