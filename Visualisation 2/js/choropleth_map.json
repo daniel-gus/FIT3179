@@ -37,7 +37,7 @@
   ],
     "transform": [
       {"filter": "datum.Year == year_selection"},
-      {"filter": "datum.State != 'Malaysia'"},
+      {"filter": "datum.state != 'Malaysia'"},
       {"calculate": "datum.Employed * 1000" , "as": "Employed"},     
       {
         "lookup": "properties.state",

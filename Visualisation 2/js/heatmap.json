@@ -1,11 +1,38 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 550,
+    "height": 400,
     "data": {
         "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20persons%20by%20age%20group%20and%20state%201982%202020.csv"
     },
+    "params":[
+        {
+            "name": "year_selection",
+            "value": 2020,
+            "bind":{
+                "input": "select",
+                "options":[
+                    2020,
+                    2010,
+                    2000,
+                    1990,
+                    1982
+                ],
+                "labels":[
+                    "2020",
+                    "2010",
+                    "2000",
+                    "1990",
+                    "1982"
+                ],
+                "name": "Year Selection"
+            }
+        }
+    ],
     "transform": [
-        {"filter": "datum.Year == 2020"},
-        {"filter": "datum.AgeGroup != 'Total'"}
+        {"filter": "datum.Year == year_selection"},
+        {"filter": "datum.AgeGroup != 'Total'"},
+        {"calculate": "datum.Employed * 1000" , "as": "Employed"}
     ],
 
 
@@ -40,7 +67,23 @@
             "scale": {"type": "log"},
             "legend": {
                 "title": "Employed"
+            }        
+        },
+        "tooltip": [
+            {
+                "field": "Country/State",
+                "title": "State"
+            },
+            {
+                "field": "AgeGroup",
+                "title": "Age Group"
+            },
+            {
+                "field": "Employed",
+                "title": "Employed Population",
+                "type": "quantitative",
+                "format": ","
             }
-        }
+            ]
     }
   }

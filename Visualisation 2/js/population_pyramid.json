@@ -27,11 +27,10 @@
                 "name": "Year Selection"
             }
         }
-
     ],
     "transform": [
         {"filter": "datum.Year == year_selection"},
-        {"filter": "datum.State != 'Malaysia'"},
+        {"filter": "datum.state != 'Malaysia'"},
         {"calculate": "datum.Employed * 1000" , "as": "Employed"},
         {"calculate": "datum.Sex == 'Male' ? 'Male' : 'Female'", "as": "gender"}
     ],
@@ -44,7 +43,7 @@
         "mark": "bar",
         "encoding": {
             "y": {
-                "field": "State", "axis": null, "sort": "descending"
+                "field": "state", "axis": null, "sort": "descending"
             },
             "x": {
                 "aggregate": "sum", "field": "Employed",
@@ -64,7 +63,7 @@
                     "type": "ordinal"
                 },
                 {
-                    "field": "State",
+                    "field": "state",
                     "title": "State",
                     "type": "nominal"
                 },
@@ -84,8 +83,8 @@
         "align": "center"
         },
         "encoding": {
-            "y": {"field": "State", "type": "nominal", "axis": null, "sort": "descending"},
-            "text": {"field": "State", "type": "nominal"}
+            "y": {"field": "state", "type": "nominal", "axis": null, "sort": "descending"},
+            "text": {"field": "state", "type": "nominal"}
         }
     }, {
         "transform": [{
@@ -95,7 +94,7 @@
         "mark": "bar",
         "encoding": {
         "y": {
-            "field": "State", "title": null,
+            "field": "state", "title": null,
             "axis": null, "sort": "descending"
         },
         "x": {
@@ -114,7 +113,7 @@
                 "type": "ordinal"
             },
             {
-                "field": "State",
+                "field": "state",
                 "title": "State",
                 "type": "nominal"
             },
