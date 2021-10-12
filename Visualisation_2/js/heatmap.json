@@ -32,8 +32,7 @@
     "transform": [
         {"filter": "datum.Year == year_selection"},
         {"filter": "datum.AgeGroup != 'Total'"},
-        {"filter": "datum.Country/State == 'MALAYSIA'"},
-        {"calculate": "datum.Employed * 1000" , "as": "Employed"}
+        {"filter": "datum.CountryState != 'MALAYSIA'"}
     ],
 
 
@@ -50,9 +49,9 @@
     "mark": "rect",
     "encoding": {
         "x": {
-            "field": "Country/State",
+            "field": "CountryState",
             "type": "nominal",
-            "title": "Country/State",
+            "title": "CountryState",
             "scale": {"domain": ["MALAYSIA", "JOHOR", "KEDAH", "MELAKA", "NEGERI SEMBILAN", "PAHANG", "PULAU PINANG", "PERAK", "PERLIS", "SELANGOR", "TERENGGANU", "SABAH", "SARAWAK","W.P.KUALA LUMPUR", "W.P.LABUAN", "W.P.PUTRAJAYA"]},
             "axis": {"labelAngle": -45}
         },
@@ -72,7 +71,7 @@
         },
         "tooltip": [
             {
-                "field": "Country/State",
+                "field": "CountryState",
                 "title": "State"
             },
             {
@@ -81,9 +80,7 @@
             },
             {
                 "field": "Employed",
-                "title": "Employed Population",
-                "type": "quantitative",
-                "format": ","
+                "title": "Employed Population ('000)"
             }
             ]
     }
