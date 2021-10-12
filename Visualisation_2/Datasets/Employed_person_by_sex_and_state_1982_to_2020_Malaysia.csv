@@ -6,7 +6,7 @@ Year,state,Sex,Employed
 2020,Melaka,Male,245.3
 2020,Negeri Sembilan,Male,284.5
 2020,Pahang,Male,471.9
-2020,Pulau Pinang,Male,490.2
+2020,Penang,Male,490.2
 2020,Perak,Male,639.8
 2020,Perlis,Male,64.4
 2020,Selangor,Male,1912.1
@@ -23,7 +23,7 @@ Year,state,Sex,Employed
 2020,Melaka,Female,172.1
 2020,Negeri Sembilan,Female,189.6
 2020,Pahang,Female,244.0
-2020,Pulau Pinang,Female,342.7
+2020,Penang,Female,342.7
 2020,Perak,Female,403.0
 2020,Perlis,Female,41.2
 2020,Selangor,Female,1534.4
@@ -40,7 +40,7 @@ Year,state,Sex,Employed
 2019,Melaka,Male,251.7
 2019,Negeri Sembilan,Male,301.0
 2019,Pahang,Male,476.5
-2019,Pulau Pinang,Male,499.6
+2019,Penang,Male,499.6
 2019,Perak,Male,655.1
 2019,Perlis,Male,65.8
 2019,Selangor,Male,1953.3
@@ -57,7 +57,7 @@ Year,state,Sex,Employed
 2019,Melaka,Female,176.6
 2019,Negeri Sembilan,Female,181.5
 2019,Pahang,Female,243.0
-2019,Pulau Pinang,Female,336.0
+2019,Penang,Female,336.0
 2019,Perak,Female,388.6
 2019,Perlis,Female,42.8
 2019,Selangor,Female,1536.2
@@ -74,7 +74,7 @@ Year,state,Sex,Employed
 2018,Melaka,Male,242.9
 2018,Negeri Sembilan,Male,301.6
 2018,Pahang,Male,472.0
-2018,Pulau Pinang,Male,488.6
+2018,Penang,Male,488.6
 2018,Perak,Male,638.6
 2018,Perlis,Male,65.3
 2018,Selangor,Male,1942.2
@@ -91,7 +91,7 @@ Year,state,Sex,Employed
 2018,Melaka,Female,173.9
 2018,Negeri Sembilan,Female,187.1
 2018,Pahang,Female,244.7
-2018,Pulau Pinang,Female,342.2
+2018,Penang,Female,342.2
 2018,Perak,Female,396.2
 2018,Perlis,Female,38.7
 2018,Selangor,Female,1504.5
@@ -108,7 +108,7 @@ Year,state,Sex,Employed
 2017,Melaka,Male,242.5
 2017,Negeri Sembilan,Male,300.5
 2017,Pahang,Male,455.6
-2017,Pulau Pinang,Male,487.3
+2017,Penang,Male,487.3
 2017,Perak,Male,629.7
 2017,Perlis,Male,61.8
 2017,Selangor,Male,1914.8
@@ -125,7 +125,7 @@ Year,state,Sex,Employed
 2017,Melaka,Female,163.7
 2017,Negeri Sembilan,Female,176.8
 2017,Pahang,Female,234.5
-2017,Pulau Pinang,Female,336.5
+2017,Penang,Female,336.5
 2017,Perak,Female,383.7
 2017,Perlis,Female,36.6
 2017,Selangor,Female,1444.5
@@ -142,7 +142,7 @@ Year,state,Sex,Employed
 2016,Melaka,Male,236.7
 2016,Negeri Sembilan,Male,297.6
 2016,Pahang,Male,457.9
-2016,Pulau Pinang,Male,493.5
+2016,Penang,Male,493.5
 2016,Perak,Male,643.6
 2016,Perlis,Male,64.5
 2016,Selangor,Male,1926.7
@@ -159,7 +159,7 @@ Year,state,Sex,Employed
 2016,Melaka,Female,164.1
 2016,Negeri Sembilan,Female,182.1
 2016,Pahang,Female,252.7
-2016,Pulau Pinang,Female,352.0
+2016,Penang,Female,352.0
 2016,Perak,Female,379.5
 2016,Perlis,Female,38.7
 2016,Selangor,Female,1398.3
@@ -176,7 +176,7 @@ Year,state,Sex,Employed
 2015,Melaka,Male,233.8
 2015,Negeri Sembilan,Male,295.0
 2015,Pahang,Male,453.8
-2015,Pulau Pinang,Male,483.7
+2015,Penang,Male,483.7
 2015,Perak,Male,624.2
 2015,Perlis,Male,62.3
 2015,Selangor,Male,1842.2
@@ -193,7 +193,7 @@ Year,state,Sex,Employed
 2015,Melaka,Female,164.5
 2015,Negeri Sembilan,Female,173.8
 2015,Pahang,Female,243.7
-2015,Pulau Pinang,Female,350.5
+2015,Penang,Female,350.5
 2015,Perak,Female,357.6
 2015,Perlis,Female,35.8
 2015,Selangor,Female,1292.8
@@ -210,7 +210,7 @@ Year,state,Sex,Employed
 2014,Melaka,Male,233.4
 2014,Negeri Sembilan,Male,294.6
 2014,Pahang,Male,449.0
-2014,Pulau Pinang,Male,479.5
+2014,Penang,Male,479.5
 2014,Perak,Male,612.8
 2014,Perlis,Male,60.7
 2014,Selangor,Male,1816.4
@@ -227,7 +227,7 @@ Year,state,Sex,Employed
 2014,Melaka,Female,161.5
 2014,Negeri Sembilan,Female,171.9
 2014,Pahang,Female,234.2
-2014,Pulau Pinang,Female,359.7
+2014,Penang,Female,359.7
 2014,Perak,Female,341.4
 2014,Perlis,Female,34.5
 2014,Selangor,Female,1217.2
@@ -244,7 +244,7 @@ Year,state,Sex,Employed
 2013,Melaka,Male,223.7
 2013,Negeri Sembilan,Male,291.6
 2013,Pahang,Male,443.3
-2013,Pulau Pinang,Male,478.4
+2013,Penang,Male,478.4
 2013,Perak,Male,621.8
 2013,Perlis,Male,59.8
 2013,Selangor,Male,1769.7
@@ -261,7 +261,7 @@ Year,state,Sex,Employed
 2013,Melaka,Female,151.8
 2013,Negeri Sembilan,Female,172.5
 2013,Pahang,Female,216.5
-2013,Pulau Pinang,Female,333.5
+2013,Penang,Female,333.5
 2013,Perak,Female,326.0
 2013,Perlis,Female,34.6
 2013,Selangor,Female,1163.7
@@ -278,7 +278,7 @@ Year,state,Sex,Employed
 2012,Melaka,Male,218.8
 2012,Negeri Sembilan,Male,282.1
 2012,Pahang,Male,435.2
-2012,Pulau Pinang,Male,461.0
+2012,Penang,Male,461.0
 2012,Perak,Male,605.2
 2012,Perlis,Male,56.4
 2012,Selangor,Male,1701.0
@@ -295,7 +295,7 @@ Year,state,Sex,Employed
 2012,Melaka,Female,138.2
 2012,Negeri Sembilan,Female,160.0
 2012,Pahang,Female,197.8
-2012,Pulau Pinang,Female,318.8
+2012,Penang,Female,318.8
 2012,Perak,Female,321.9
 2012,Perlis,Female,30.8
 2012,Selangor,Female,1075.1
@@ -312,7 +312,7 @@ Year,state,Sex,Employed
 2011,Melaka,Male,208.7
 2011,Negeri Sembilan,Male,269.3
 2011,Pahang,Male,421.4
-2011,Pulau Pinang,Male,454.1
+2011,Penang,Male,454.1
 2011,Perak,Male,602.6
 2011,Perlis,Male,55.6
 2011,Selangor,Male,1642.4
@@ -329,7 +329,7 @@ Year,state,Sex,Employed
 2011,Melaka,Female,132.1
 2011,Negeri Sembilan,Female,146.7
 2011,Pahang,Female,187.0
-2011,Pulau Pinang,Female,318.7
+2011,Penang,Female,318.7
 2011,Perak,Female,317.2
 2011,Perlis,Female,27.7
 2011,Selangor,Female,1002.8
@@ -346,7 +346,7 @@ Year,state,Sex,Employed
 2010,Melaka,Male,209.1
 2010,Negeri Sembilan,Male,267.1
 2010,Pahang,Male,405.4
-2010,Pulau Pinang,Male,439.4
+2010,Penang,Male,439.4
 2010,Perak,Male,585.4
 2010,Perlis,Male,53.8
 2010,Selangor,Male,1597.1
@@ -363,7 +363,7 @@ Year,state,Sex,Employed
 2010,Melaka,Female,126.0
 2010,Negeri Sembilan,Female,138.3
 2010,Pahang,Female,185.6
-2010,Pulau Pinang,Female,302.9
+2010,Penang,Female,302.9
 2010,Perak,Female,293.3
 2010,Perlis,Female,27.1
 2010,Selangor,Female,954.1
@@ -380,7 +380,7 @@ Year,state,Sex,Employed
 2009,Melaka,Male,176.3
 2009,Negeri Sembilan,Male,251.3
 2009,Pahang,Male,413.5
-2009,Pulau Pinang,Male,400.5
+2009,Penang,Male,400.5
 2009,Perak,Male,568.0
 2009,Perlis,Male,52.3
 2009,Selangor,Male,1303.2
@@ -397,7 +397,7 @@ Year,state,Sex,Employed
 2009,Melaka,Female,107.6
 2009,Negeri Sembilan,Female,135.2
 2009,Pahang,Female,190.2
-2009,Pulau Pinang,Female,289.3
+2009,Penang,Female,289.3
 2009,Perak,Female,323.5
 2009,Perlis,Female,29.2
 2009,Selangor,Female,792.1
@@ -414,7 +414,7 @@ Year,state,Sex,Employed
 2008,Melaka,Male,178.0
 2008,Negeri Sembilan,Male,254.1
 2008,Pahang,Male,407.1
-2008,Pulau Pinang,Male,398.8
+2008,Penang,Male,398.8
 2008,Perak,Male,553.7
 2008,Perlis,Male,50.8
 2008,Selangor,Male,1297.1
@@ -431,7 +431,7 @@ Year,state,Sex,Employed
 2008,Melaka,Female,108.8
 2008,Negeri Sembilan,Female,132.9
 2008,Pahang,Female,182.8
-2008,Pulau Pinang,Female,276.1
+2008,Penang,Female,276.1
 2008,Perak,Female,305.2
 2008,Perlis,Female,30.7
 2008,Selangor,Female,794.9
@@ -448,7 +448,7 @@ Year,state,Sex,Employed
 2007,Melaka,Male,172.8
 2007,Negeri Sembilan,Male,248.4
 2007,Pahang,Male,392.4
-2007,Pulau Pinang,Male,390.8
+2007,Penang,Male,390.8
 2007,Perak,Male,548.2
 2007,Perlis,Male,50.7
 2007,Selangor,Male,1279.4
@@ -465,7 +465,7 @@ Year,state,Sex,Employed
 2007,Melaka,Female,111.4
 2007,Negeri Sembilan,Female,133.2
 2007,Pahang,Female,169.4
-2007,Pulau Pinang,Female,262.7
+2007,Penang,Female,262.7
 2007,Perak,Female,304.0
 2007,Perlis,Female,29.3
 2007,Selangor,Female,784.8
@@ -482,7 +482,7 @@ Year,state,Sex,Employed
 2006,Melaka,Male,169.7
 2006,Negeri Sembilan,Male,243.3
 2006,Pahang,Male,394.9
-2006,Pulau Pinang,Male,389.2
+2006,Penang,Male,389.2
 2006,Perak,Male,534.5
 2006,Perlis,Male,49.0
 2006,Selangor,Male,1258.4
@@ -499,7 +499,7 @@ Year,state,Sex,Employed
 2006,Melaka,Female,103.5
 2006,Negeri Sembilan,Female,135.5
 2006,Pahang,Female,162.5
-2006,Pulau Pinang,Female,258.5
+2006,Penang,Female,258.5
 2006,Perak,Female,281.3
 2006,Perlis,Female,25.5
 2006,Selangor,Female,759.3
@@ -516,7 +516,7 @@ Year,state,Sex,Employed
 2005,Melaka,Male,168.6
 2005,Negeri Sembilan,Male,239.5
 2005,Pahang,Male,375.7
-2005,Pulau Pinang,Male,382.9
+2005,Penang,Male,382.9
 2005,Perak,Male,520.3
 2005,Perlis,Male,47.3
 2005,Selangor,Male,1242.4
@@ -533,7 +533,7 @@ Year,state,Sex,Employed
 2005,Melaka,Female,102.5
 2005,Negeri Sembilan,Female,133.3
 2005,Pahang,Female,149.0
-2005,Pulau Pinang,Female,238.6
+2005,Penang,Female,238.6
 2005,Perak,Female,280.9
 2005,Perlis,Female,26.7
 2005,Selangor,Female,743.5
@@ -550,7 +550,7 @@ Year,state,Sex,Employed
 2004,Melaka,Male,166.4
 2004,Negeri Sembilan,Male,228.5
 2004,Pahang,Male,368.8
-2004,Pulau Pinang,Male,378.6
+2004,Penang,Male,378.6
 2004,Perak,Male,514.8
 2004,Perlis,Male,47.6
 2004,Selangor,Male,1234.3
@@ -567,7 +567,7 @@ Year,state,Sex,Employed
 2004,Melaka,Female,99.0
 2004,Negeri Sembilan,Female,131.8
 2004,Pahang,Female,157.4
-2004,Pulau Pinang,Female,246.4
+2004,Penang,Female,246.4
 2004,Perak,Female,276.2
 2004,Perlis,Female,26.2
 2004,Selangor,Female,739.1
@@ -584,7 +584,7 @@ Year,state,Sex,Employed
 2003,Melaka,Male,167.1
 2003,Negeri Sembilan,Male,215.6
 2003,Pahang,Male,319.0
-2003,Pulau Pinang,Male,407.5
+2003,Penang,Male,407.5
 2003,Perak,Male,484.2
 2003,Perlis,Male,50.8
 2003,Selangor,Male,1164.9
@@ -601,7 +601,7 @@ Year,state,Sex,Employed
 2003,Melaka,Female,105.6
 2003,Negeri Sembilan,Female,124.1
 2003,Pahang,Female,141.0
-2003,Pulau Pinang,Female,266.8
+2003,Penang,Female,266.8
 2003,Perak,Female,250.5
 2003,Perlis,Female,25.8
 2003,Selangor,Female,669.3
@@ -618,7 +618,7 @@ Year,state,Sex,Employed
 2002,Melaka,Male,145.8
 2002,Negeri Sembilan,Male,206.6
 2002,Pahang,Male,283.2
-2002,Pulau Pinang,Male,389.2
+2002,Penang,Male,389.2
 2002,Perak,Male,516.8
 2002,Perlis,Male,38.5
 2002,Selangor,Male,1130.9
@@ -635,7 +635,7 @@ Year,state,Sex,Employed
 2002,Melaka,Female,83.5
 2002,Negeri Sembilan,Female,118.2
 2002,Pahang,Female,123.7
-2002,Pulau Pinang,Female,253.9
+2002,Penang,Female,253.9
 2002,Perak,Female,271.5
 2002,Perlis,Female,18.5
 2002,Selangor,Female,619.0
@@ -652,7 +652,7 @@ Year,state,Sex,Employed
 2001,Melaka,Male,170.5
 2001,Negeri Sembilan,Male,226.3
 2001,Pahang,Male,303.4
-2001,Pulau Pinang,Male,429.2
+2001,Penang,Male,429.2
 2001,Perak,Male,480.1
 2001,Perlis,Male,55.5
 2001,Selangor,Male,979.0
@@ -669,7 +669,7 @@ Year,state,Sex,Employed
 2001,Melaka,Female,97.2
 2001,Negeri Sembilan,Female,125.0
 2001,Pahang,Female,134.4
-2001,Pulau Pinang,Female,285.7
+2001,Penang,Female,285.7
 2001,Perak,Female,250.6
 2001,Perlis,Female,27.3
 2001,Selangor,Female,535.6
@@ -686,7 +686,7 @@ Year,state,Sex,Employed
 2000,Melaka,Male,160.6
 2000,Negeri Sembilan,Male,223.2
 2000,Pahang,Male,311.3
-2000,Pulau Pinang,Male,377.1
+2000,Penang,Male,377.1
 2000,Perak,Male,485.8
 2000,Perlis,Male,48.9
 2000,Selangor,Male,1054.1
@@ -703,7 +703,7 @@ Year,state,Sex,Employed
 2000,Melaka,Female,92.9
 2000,Negeri Sembilan,Female,124.2
 2000,Pahang,Female,135.5
-2000,Pulau Pinang,Female,292.1
+2000,Penang,Female,292.1
 2000,Perak,Female,258.3
 2000,Perlis,Female,25.8
 2000,Selangor,Female,627.3
@@ -720,7 +720,7 @@ Year,state,Sex,Employed
 1999,Melaka,Male,156.0
 1999,Negeri Sembilan,Male,187.0
 1999,Pahang,Male,287.4
-1999,Pulau Pinang,Male,359.4
+1999,Penang,Male,359.4
 1999,Perak,Male,454.7
 1999,Perlis,Male,50.8
 1999,Selangor,Male,900.0
@@ -737,7 +737,7 @@ Year,state,Sex,Employed
 1999,Melaka,Female,87.1
 1999,Negeri Sembilan,Female,87.9
 1999,Pahang,Female,97.0
-1999,Pulau Pinang,Female,243.5
+1999,Penang,Female,243.5
 1999,Perak,Female,229.8
 1999,Perlis,Female,27.7
 1999,Selangor,Female,527.2
@@ -754,7 +754,7 @@ Year,state,Sex,Employed
 1998,Melaka,Male,159.5
 1998,Negeri Sembilan,Male,196.4
 1998,Pahang,Male,272.1
-1998,Pulau Pinang,Male,361.5
+1998,Penang,Male,361.5
 1998,Perak,Male,443.7
 1998,Perlis,Male,49.9
 1998,Selangor,Male,915.8
@@ -771,7 +771,7 @@ Year,state,Sex,Employed
 1998,Melaka,Female,82.9
 1998,Negeri Sembilan,Female,107.9
 1998,Pahang,Female,92.8
-1998,Pulau Pinang,Female,223.7
+1998,Penang,Female,223.7
 1998,Perak,Female,241.3
 1998,Perlis,Female,21.1
 1998,Selangor,Female,514.6
@@ -788,7 +788,7 @@ Year,state,Sex,Employed
 1997,Melaka,Male,163.5
 1997,Negeri Sembilan,Male,196.9
 1997,Pahang,Male,283.2
-1997,Pulau Pinang,Male,341.2
+1997,Penang,Male,341.2
 1997,Perak,Male,485.3
 1997,Perlis,Male,47.8
 1997,Selangor,Male,862.0
@@ -805,7 +805,7 @@ Year,state,Sex,Employed
 1997,Melaka,Female,93.7
 1997,Negeri Sembilan,Female,110.7
 1997,Pahang,Female,112.2
-1997,Pulau Pinang,Female,210.8
+1997,Penang,Female,210.8
 1997,Perak,Female,258.9
 1997,Perlis,Female,22.3
 1997,Selangor,Female,467.9
@@ -822,7 +822,7 @@ Year,state,Sex,Employed
 1996,Melaka,Male,153.5
 1996,Negeri Sembilan,Male,202.9
 1996,Pahang,Male,296.0
-1996,Pulau Pinang,Male,300.6
+1996,Penang,Male,300.6
 1996,Perak,Male,462.7
 1996,Perlis,Male,48.5
 1996,Selangor,Male,874.5
@@ -839,7 +839,7 @@ Year,state,Sex,Employed
 1996,Melaka,Female,83.5
 1996,Negeri Sembilan,Female,116.4
 1996,Pahang,Female,110.2
-1996,Pulau Pinang,Female,148.8
+1996,Penang,Female,148.8
 1996,Perak,Female,260.4
 1996,Perlis,Female,21.6
 1996,Selangor,Female,484.6
@@ -856,7 +856,7 @@ Year,state,Sex,Employed
 1995,Melaka,Male,147.3
 1995,Negeri Sembilan,Male,188.6
 1995,Pahang,Male,272.3
-1995,Pulau Pinang,Male,313.9
+1995,Penang,Male,313.9
 1995,Perak,Male,421.5
 1995,Perlis,Male,50.3
 1995,Selangor,Male,858.3
@@ -873,7 +873,7 @@ Year,state,Sex,Employed
 1995,Melaka,Female,75.5
 1995,Negeri Sembilan,Female,107.5
 1995,Pahang,Female,99.1
-1995,Pulau Pinang,Female,172.0
+1995,Penang,Female,172.0
 1995,Perak,Female,212.8
 1995,Perlis,Female,20.5
 1995,Selangor,Female,480.5
@@ -890,7 +890,7 @@ Year,state,Sex,Employed
 1993,Melaka,Male,140.0
 1993,Negeri Sembilan,Male,165.4
 1993,Pahang,Male,264.0
-1993,Pulau Pinang,Male,347.5
+1993,Penang,Male,347.5
 1993,Perak,Male,435.6
 1993,Perlis,Male,50.9
 1993,Selangor,Male,696.1
@@ -907,7 +907,7 @@ Year,state,Sex,Employed
 1993,Melaka,Female,78.5
 1993,Negeri Sembilan,Female,119.0
 1993,Pahang,Female,114.7
-1993,Pulau Pinang,Female,183.5
+1993,Penang,Female,183.5
 1993,Perak,Female,234.1
 1993,Perlis,Female,19.8
 1993,Selangor,Female,384.0
@@ -924,7 +924,7 @@ Year,state,Sex,Employed
 1992,Melaka,Male,128.2
 1992,Negeri Sembilan,Male,155.5
 1992,Pahang,Male,289.7
-1992,Pulau Pinang,Male,324.1
+1992,Penang,Male,324.1
 1992,Perak,Male,432.3
 1992,Perlis,Male,46.6
 1992,Selangor,Male,692.7
@@ -941,7 +941,7 @@ Year,state,Sex,Employed
 1992,Melaka,Female,79.2
 1992,Negeri Sembilan,Female,95.9
 1992,Pahang,Female,127.3
-1992,Pulau Pinang,Female,188.6
+1992,Penang,Female,188.6
 1992,Perak,Female,260.6
 1992,Perlis,Female,20.3
 1992,Selangor,Female,376.9
@@ -958,7 +958,7 @@ Year,state,Sex,Employed
 1990,Melaka,Male,111.0
 1990,Negeri Sembilan,Male,134.9
 1990,Pahang,Male,298.7
-1990,Pulau Pinang,Male,285.8
+1990,Penang,Male,285.8
 1990,Perak,Male,424.3
 1990,Perlis,Male,40.6
 1990,Selangor,Male,674.7
@@ -975,7 +975,7 @@ Year,state,Sex,Employed
 1990,Melaka,Female,69.1
 1990,Negeri Sembilan,Female,81.0
 1990,Pahang,Female,130.1
-1990,Pulau Pinang,Female,171.4
+1990,Penang,Female,171.4
 1990,Perak,Female,253.9
 1990,Perlis,Female,16.5
 1990,Selangor,Female,364.7
@@ -992,7 +992,7 @@ Year,state,Sex,Employed
 1989,Melaka,Male,113.7
 1989,Negeri Sembilan,Male,145.2
 1989,Pahang,Male,267.2
-1989,Pulau Pinang,Male,279.5
+1989,Penang,Male,279.5
 1989,Perak,Male,434.1
 1989,Perlis,Male,46.8
 1989,Selangor,Male,578.0
@@ -1009,7 +1009,7 @@ Year,state,Sex,Employed
 1989,Melaka,Female,72.2
 1989,Negeri Sembilan,Female,84.1
 1989,Pahang,Female,111.9
-1989,Pulau Pinang,Female,156.8
+1989,Penang,Female,156.8
 1989,Perak,Female,252.6
 1989,Perlis,Female,19.6
 1989,Selangor,Female,322.2
@@ -1026,7 +1026,7 @@ Year,state,Sex,Employed
 1988,Melaka,Male,109.8
 1988,Negeri Sembilan,Male,148.3
 1988,Pahang,Male,241.6
-1988,Pulau Pinang,Male,264.2
+1988,Penang,Male,264.2
 1988,Perak,Male,417.4
 1988,Perlis,Male,48.0
 1988,Selangor,Male,575.7
@@ -1043,7 +1043,7 @@ Year,state,Sex,Employed
 1988,Melaka,Female,65.6
 1988,Negeri Sembilan,Female,79.7
 1988,Pahang,Female,109.8
-1988,Pulau Pinang,Female,134.7
+1988,Penang,Female,134.7
 1988,Perak,Female,239.3
 1988,Perlis,Female,17.5
 1988,Selangor,Female,317.4
@@ -1060,7 +1060,7 @@ Year,state,Sex,Employed
 1987,Melaka,Male,110.2
 1987,Negeri Sembilan,Male,144.3
 1987,Pahang,Male,228.9
-1987,Pulau Pinang,Male,263.4
+1987,Penang,Male,263.4
 1987,Perak,Male,417.9
 1987,Perlis,Male,43.3
 1987,Selangor,Male,558.7
@@ -1077,7 +1077,7 @@ Year,state,Sex,Employed
 1987,Melaka,Female,66.5
 1987,Negeri Sembilan,Female,77.5
 1987,Pahang,Female,107.0
-1987,Pulau Pinang,Female,141.5
+1987,Penang,Female,141.5
 1987,Perak,Female,252.6
 1987,Perlis,Female,17.3
 1987,Selangor,Female,306.3
@@ -1094,7 +1094,7 @@ Year,state,Sex,Employed
 1986,Melaka,Male,104.8
 1986,Negeri Sembilan,Male,137.8
 1986,Pahang,Male,217.5
-1986,Pulau Pinang,Male,260.2
+1986,Penang,Male,260.2
 1986,Perak,Male,421.1
 1986,Perlis,Male,39.8
 1986,Selangor,Male,512.2
@@ -1111,7 +1111,7 @@ Year,state,Sex,Employed
 1986,Melaka,Female,65.0
 1986,Negeri Sembilan,Female,75.7
 1986,Pahang,Female,97.9
-1986,Pulau Pinang,Female,131.2
+1986,Penang,Female,131.2
 1986,Perak,Female,248.8
 1986,Perlis,Female,17.8
 1986,Selangor,Female,264.8
@@ -1128,7 +1128,7 @@ Year,state,Sex,Employed
 1985,Melaka,Male,108.6
 1985,Negeri Sembilan,Male,133.3
 1985,Pahang,Male,227.8
-1985,Pulau Pinang,Male,259.9
+1985,Penang,Male,259.9
 1985,Perak,Male,423.4
 1985,Perlis,Male,43.0
 1985,Selangor,Male,468.1
@@ -1145,7 +1145,7 @@ Year,state,Sex,Employed
 1985,Melaka,Female,61.5
 1985,Negeri Sembilan,Female,77.5
 1985,Pahang,Female,100.1
-1985,Pulau Pinang,Female,128.2
+1985,Penang,Female,128.2
 1985,Perak,Female,246.2
 1985,Perlis,Female,17.6
 1985,Selangor,Female,238.0
@@ -1162,7 +1162,7 @@ Year,state,Sex,Employed
 1984,Melaka,Male,101.8
 1984,Negeri Sembilan,Male,146.0
 1984,Pahang,Male,211.0
-1984,Pulau Pinang,Male,257.5
+1984,Penang,Male,257.5
 1984,Perak,Male,419.9
 1984,Perlis,Male,43.5
 1984,Selangor,Male,459.8
@@ -1179,7 +1179,7 @@ Year,state,Sex,Employed
 1984,Melaka,Female,60.8
 1984,Negeri Sembilan,Female,77.3
 1984,Pahang,Female,95.9
-1984,Pulau Pinang,Female,126.2
+1984,Penang,Female,126.2
 1984,Perak,Female,239.7
 1984,Perlis,Female,18.3
 1984,Selangor,Female,230.5
@@ -1196,7 +1196,7 @@ Year,state,Sex,Employed
 1983,Melaka,Male,103.0
 1983,Negeri Sembilan,Male,134.5
 1983,Pahang,Male,229.3
-1983,Pulau Pinang,Male,262.2
+1983,Penang,Male,262.2
 1983,Perak,Male,422.4
 1983,Perlis,Male,47.0
 1983,Selangor,Male,489.0
@@ -1213,7 +1213,7 @@ Year,state,Sex,Employed
 1983,Melaka,Female,62.5
 1983,Negeri Sembilan,Female,80.5
 1983,Pahang,Female,104.2
-1983,Pulau Pinang,Female,142.6
+1983,Penang,Female,142.6
 1983,Perak,Female,246.8
 1983,Perlis,Female,16.8
 1983,Selangor,Female,251.0
@@ -1230,7 +1230,7 @@ Year,state,Sex,Employed
 1982,Melaka,Male,109.1
 1982,Negeri Sembilan,Male,136.8
 1982,Pahang,Male,186.2
-1982,Pulau Pinang,Male,253.1
+1982,Penang,Male,253.1
 1982,Perak,Male,386.4
 1982,Perlis,Male,38.3
 1982,Selangor,Male,449.2
@@ -1247,7 +1247,7 @@ Year,state,Sex,Employed
 1982,Melaka,Female,58.0
 1982,Negeri Sembilan,Female,79.5
 1982,Pahang,Female,84.0
-1982,Pulau Pinang,Female,129.2
+1982,Penang,Female,129.2
 1982,Perak,Female,217.6
 1982,Perlis,Female,17.4
 1982,Selangor,Female,227.7
