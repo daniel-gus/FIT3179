@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Population Pyramid of Employed Persons by Gender",
     "data": {
-        "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+        "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
     },
     "params":[
         {
@@ -31,7 +31,7 @@
     ],
     "transform": [
         {"filter": "datum.Year == year_selection"},
-        {"filter": "datum.State != 'Malaysia'"},
+        {"filter": "datum.state != 'Malaysia'"},
         {"calculate": "datum.Employed * 1000" , "as": "Employed"},
         {"calculate": "datum.Sex == 'Male' ? 'Male' : 'Female'", "as": "gender"}
     ],
@@ -44,7 +44,7 @@
         "mark": "bar",
         "encoding": {
             "y": {
-                "field": "State", "axis": null, "sort": "descending"
+                "field": "state", "axis": null, "sort": "descending"
             },
             "x": {
                 "aggregate": "sum", "field": "Employed",
@@ -64,8 +64,8 @@
                     "type": "ordinal"
                 },
                 {
-                    "field": "State",
-                    "title": "State",
+                    "field": "state",
+                    "title": "state",
                     "type": "nominal"
                 },
                 {
@@ -84,8 +84,8 @@
         "align": "center"
         },
         "encoding": {
-            "y": {"field": "State", "type": "nominal", "axis": null, "sort": "descending"},
-            "text": {"field": "State", "type": "nominal"}
+            "y": {"field": "state", "type": "nominal", "axis": null, "sort": "descending"},
+            "text": {"field": "state", "type": "nominal"}
         }
     }, {
         "transform": [{
@@ -95,7 +95,7 @@
         "mark": "bar",
         "encoding": {
         "y": {
-            "field": "State", "title": null,
+            "field": "state", "title": null,
             "axis": null, "sort": "descending"
         },
         "x": {
@@ -114,8 +114,8 @@
                 "type": "ordinal"
             },
             {
-                "field": "State",
-                "title": "State",
+                "field": "state",
+                "title": "state",
                 "type": "nominal"
             },
             {

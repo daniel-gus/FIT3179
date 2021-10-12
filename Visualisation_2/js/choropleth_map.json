@@ -14,7 +14,7 @@
       "lookup": "properties.state",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
         },
         "key": "state",
         "fields": ["sum_employed"]
