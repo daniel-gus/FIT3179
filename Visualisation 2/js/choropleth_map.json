@@ -10,14 +10,43 @@
             "feature": "state_boundaries"
           }
     },
-    "transform": [{
+    "params":[
+      {
+          "name": "year_selection",
+          "value": 2020,
+          "bind":{
+              "input": "select",
+              "options":[
+                  2020,
+                  2010,
+                  2000,
+                  1990,
+                  1982
+              ],
+              "labels":[
+                  "2020",
+                  "2010",
+                  "2000",
+                  "1990",
+                  "1982"
+              ],
+              "name": "Year Selection"
+          }
+      }
+
+  ],
+    "transform": [
+      {"filter": "datum.Year == year_selection"},
+      {"filter": "datum.State != 'Malaysia'"},
+      {"calculate": "datum.Employed * 1000" , "as": "Employed"},     
+      {
         "lookup": "properties.state",
         "from": {
           "data": {
-            "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/cleaned%20Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
+            "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20person%20by%20sex%20and%20state%201982%20to%202020%20Malay.csv"
           },
           "key": "state",
-          "fields": ["sum_employed"]
+          "fields": ["Employed"]
         }
       }
     ],
@@ -29,13 +58,13 @@
       },
     "encoding": {
       "color": {
-        "field": "sum_employed",
+        "field": "Employed",
         "type": "quantitative",
         "scale": {"type": "log"}
       },
       "tooltip": [
         {"field": "properties.state", "type": "nominal", "title": "state"},
-        {"field": "sum_employed", "type": "quantitative"}
+        {"field": "Employed", "type": "quantitative"}
       ]
     }
   
