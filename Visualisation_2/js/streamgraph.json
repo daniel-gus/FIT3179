@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 300, "height": 200,
-    "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation%202/Datasets/Employed%20persons%20by%20occupation%20and%20state%201982%202020.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_marital_status_and_state_Malaysia.csv"},
     "transform": [
+        {"filter": "datum.State == 'JOHOR'"},
         {"filter": "datum.State == 'JOHOR'"}
     ],
     "mark": "area",
@@ -16,7 +17,7 @@
         "axis": null,
         "stack": "center"
       },
-      "color": {"field":"Occupation", "scale":{"scheme": "category20b"}}
+      "color": {"field":"Marital Status", "scale":{"scheme": "category20b"}}
     }
   }
   
