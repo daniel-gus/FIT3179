@@ -126,17 +126,19 @@
    <div class="pure-g">
 
     <div class="pure-u-1-2">
-        <h2>Marital Status</h2>
+        <h2>MARITAL STATUS</h2>
         <p>Employed Population by Marital Status</p>
-      <div class="pure-u-2-3">
+      <div class="pure-u-1-2">
       <div id="streamgraph"  class="vis-container"></div>
     </div>
   </div>
   
   <div class="pure-u-1-2">
-        <h2>???</h2>
-        <p>Employed Population by ???</p>
-      
+        <h2>STRATUM</h2>
+        <p>Employed Population by Stratum</p>
+        <div class="pure-u-1-2">
+          <div id="isotype_bar_chart"  class="vis-container"></div>
+        </div>
       </div> 
     </div>
   <!-- end pure grid group -->
@@ -157,6 +159,7 @@
   var specVis2 = "js/choropleth_map.json";
   var specVis3 = "js/heatmap.json";
   var specVis4 = "js/streamgraph.json";
+  var specVis5 = "js/isotype_bar_chart.json"
 
   vegaEmbed('#choropleth_map', specVis2).then(function(result) {
   }).catch(console.error);
@@ -168,6 +171,9 @@
   }).catch(console.error);
 
   vegaEmbed('#streamgraph', specVis4).then(function(result) {
+  }).catch(console.error);
+
+  vegaEmbed('#isotype_bar_chart', specVis5).then(function(result) {
   }).catch(console.error);
 </script>
 
