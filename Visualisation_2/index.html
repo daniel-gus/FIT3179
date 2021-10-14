@@ -159,6 +159,7 @@
   var specVis2 = "js/choropleth_map.json";
   var specVis3 = "js/heatmap.json";
   var specVis4 = "js/streamgraph.json";
+  /*var specVis4 = "js/horizon_graph.json";*/
   var specVis5 = "js/isotype_bar_chart.json"
 
   vegaEmbed('#choropleth_map', specVis2).then(function(result) {
@@ -170,9 +171,14 @@
   vegaEmbed('#heatmap', specVis3).then(function(result) {
   }).catch(console.error);
 
+  
   vegaEmbed('#streamgraph', specVis4).then(function(result) {
   }).catch(console.error);
-
+  
+/*
+  vegaEmbed('#horizon_graph', specVis4).then(function(result) {
+  }).catch(console.error);
+*/
   vegaEmbed('#isotype_bar_chart', specVis5).then(function(result) {
   }).catch(console.error);
 </script>
