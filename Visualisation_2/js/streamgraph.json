@@ -1,15 +1,65 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 300, "height": 300,
-    "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_occupation_and_state_1982_2020.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_educational_attainment_and_state_Malaysia.csv"},
+    "params":[
+        {
+            "name": "state_selection",
+            "value": "MALAYSIA",
+            "bind":{
+                "input": "select",
+                "options":[
+                    "MALAYSIA",
+                    "JOHOR",
+                    "KEDAH",
+                    "KELANTAN",
+                    "MELAKA",
+                    "N.SEMBILAN",
+                    "PAHANG",
+                    "P.PINANG",
+                    "PERAK",
+                    "PERLIS",
+                    "SELANGOR",
+                    "TERENGGANU",
+                    "SABAH",
+                    "SARAWAK",
+                    "W.P.KUALA LUMPUR",
+                    "W.P.LABUAN",
+                    "W.P.PUTRAJAYA"
+                ],
+                "labels":[
+                    "MALAYSIA",
+                    "JOHOR",
+                    "KEDAH",
+                    "KELANTAN",
+                    "MELAKA",
+                    "N.SEMBILAN",
+                    "PAHANG",
+                    "P.PINANG",
+                    "PERAK",
+                    "PERLIS",
+                    "SELANGOR",
+                    "TERENGGANU",
+                    "SABAH",
+                    "SARAWAK",
+                    "W.P.KUALA LUMPUR",
+                    "W.P.LABUAN",
+                    "W.P.PUTRAJAYA"
+                ],
+                "name": "State Selection: "
+            }
+        }
+    ],
+    
     "transform": [
-        {"filter": "datum.State == 'JOHOR'"}
+        {"filter": "datum.CountryState == state_selection"},
+        {"filter": "datum.Educational != 'Total'"}
     ],
     "mark": "area",
     "selection": {
-      "Occupation": {
+      "Educational": {
           "type": "single",
-          "fields": ["Occupation"],
+          "fields": ["Educational"],
           "on": "mouseover",
           "bind": "legend"
       }
@@ -26,16 +76,32 @@
         "stack": "center"
       },
       "color": {
-        "field":"Occupation", 
-        "scale":{"scheme": "category20b"}
+        "field":"Educational", 
+          "type": "nominal",
+          "scale":{
+            "domain": [
+              "No formal education",
+              "Primary",
+              "Secondary",
+              "Tertiary"
+            ],
+            "range": [
+              "#e41a1c",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8"
+            ]
+          }
       },
       "opacity": {
-        "condition": {"selection": "Occupation", "value": 1},
+        "condition": {"selection": "Educational", "value": 1},
         "value": 0.15
       },
       "tooltip": [
           {"field": "Year", "timeUnit": "year", "title": "Year"},
-          {"field": "Person", "aggregate": "sum", "type": "quantitative", "title": "Person"}
+          {"field": "CountryState", "title": "Country / State"},
+          {"field": "Person", "aggregate": "sum", "type": "quantitative", "title": "Number of Employed ('000)"}
       ]
+
     }
   }

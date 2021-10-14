@@ -39,7 +39,7 @@
      }
      .page{
        width: 1500px; 
-       height: 1800px;   
+       height: 3150px;   
        background-color: #fefcf8;   
        margin: auto;
        padding: 50px;
@@ -48,6 +48,11 @@
     .vis-container{
       width: 100%;
     }
+    .title h2{
+      /*border: 1px outset black;*/
+      background-color: #faecd4;  
+      margin-top:0px;
+    } 
     .description h2{
       /*border: 1px outset black;*/
       background-color: #faf4e7;  
@@ -88,9 +93,20 @@
 
    <!-- pure grid group -->
    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <div class="title description-left">
+          <h2>ACROSS THE YEARS</h2>
+        </div>    
+      </div>
+  </div>
+  <!-- end pure grid group -->
+   
+
+   <!-- pure grid group -->
+   <div class="pure-g">
     <div class="pure-u-1-1">
       <div class="description description-left">
-        <h2>MAP OF MALAYSIA</h2>
+        <h2><i>MAP OF MALAYSIA</i></h2>
         <p>This is Malaysia's map along with its states.</p>
       </div>
       <div class="pure-u-1-1">
@@ -103,18 +119,21 @@
 
    <!-- pure grid group -->
    <div class="pure-g">
-
     <div class="pure-u-1-2">
-        <h2>GENDER</h2>
+      <div class="description description-left">
+        <h2><i>GENDER</i></h2>
         <p>Employed Population by Gender</p>
+      </div>
       <div class="pure-u-1-2">
       <div id="population_pyramid"  class="vis-container"></div>
     </div>
   </div>
   
   <div class="pure-u-1-2">
-        <h2>AGE GROUP</h2>
+    <div class="description description-right">
+        <h2><i>AGE GROUP</i></h2>
         <p>Employed Population by Age Group</p>
+    </div>
       <div class="pure-u-1-2">
         <div id="heatmap"  class="vis-container"></div>
       </div>
@@ -122,25 +141,69 @@
   </div>
 <!-- end pure grid group -->
 
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="description description-left">
+      <h2><i>STRATUM</i></h2>
+      <p>Employed Population by Stratum</p>
+    </div>
+  </div>
+    <div class="pure-u-1-2">
+      <div id="isotype_bar_chart_left" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-2">
+      <div id="isotype_bar_chart_right" class="vis-container"></div>
+  </div>
+
+  
+</div>
+<!-- end pure grid group -->
+
+
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="title description-left">
+      <h2>ACROSS THE STATES</h2>
+    </div>    
+  </div>
+</div>
+<!-- end pure grid group -->
+
    <!-- pure grid group -->
    <div class="pure-g">
 
-    <div class="pure-u-1-2">
-        <h2>MARITAL STATUS</h2>
-        <p>Employed Population by Marital Status</p>
+    <div class="pure-u-1-3">
+      <div class="description description-left">
+        <h2><i>EDUCATIONAL ATTAINMENT</i></h2>
+        <p>Employed Population by Educational Attainment from 2002 to 2020</p>
+      </div>
       <div class="pure-u-1-2">
       <div id="streamgraph"  class="vis-container"></div>
     </div>
   </div>
   
-  <div class="pure-u-1-2">
-        <h2>STRATUM</h2>
-        <p>Employed Population by Stratum</p>
+  <div class="pure-u-1-3">
+    <div class="description description-right">
+        <h2><i>MARITAL STATUS</i></h2>
+        <p>Employed Population by Marital Status</p>
+      </div>
         <div class="pure-u-1-2">
-          <div id="isotype_bar_chart"  class="vis-container"></div>
+          <div id="horizon_graph"  class="vis-container"></div>
         </div>
       </div> 
-    </div>
+
+      <div class="pure-u-1-3">
+        <div class="description description-right">
+            <h2><i>???</i></h2>
+            <p>Employed Population by ???</p>
+          </div>
+            <div class="pure-u-1-2">
+              <div id="streamgraph2"  class="vis-container"></div>
+            </div>
+          </div> 
+  </div>
   <!-- end pure grid group -->
 
   <hr>
@@ -158,9 +221,12 @@
   var specVis1 = "js/population_pyramid.json";
   var specVis2 = "js/choropleth_map.json";
   var specVis3 = "js/heatmap.json";
-  var specVis4 = "js/streamgraph.json";
-  /*var specVis4 = "js/horizon_graph.json";*/
-  var specVis5 = "js/isotype_bar_chart.json"
+  var specVis4 = "js/isotype_bar_chart_left.json";
+  var specVis5 = "js/isotype_bar_chart_right.json";
+  var specVis6 = "js/streamgraph.json";
+  var specVis7 = "js/horizon_graph.json";
+  var specVis8 = "js/streamgraph2.json";
+
 
   vegaEmbed('#choropleth_map', specVis2).then(function(result) {
   }).catch(console.error);
@@ -171,16 +237,21 @@
   vegaEmbed('#heatmap', specVis3).then(function(result) {
   }).catch(console.error);
 
-  
-  vegaEmbed('#streamgraph', specVis4).then(function(result) {
+  vegaEmbed('#isotype_bar_chart_left', specVis4).then(function(result) {
+  }).catch(console.error);
+
+  vegaEmbed('#isotype_bar_chart_right', specVis5).then(function(result) {
   }).catch(console.error);
   
-/*
-  vegaEmbed('#horizon_graph', specVis4).then(function(result) {
+  vegaEmbed('#streamgraph', specVis6).then(function(result) {
+  }).catch(console.error);  
+
+  vegaEmbed('#horizon_graph', specVis7).then(function(result) {
   }).catch(console.error);
-*/
-  vegaEmbed('#isotype_bar_chart', specVis5).then(function(result) {
+
+  vegaEmbed('#streamgraph2', specVis8).then(function(result) {
   }).catch(console.error);
+
 </script>
 
 </body>

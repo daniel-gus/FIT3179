@@ -14,6 +14,8 @@
   },
   "transform": [
     {"filter": "datum.StateCountry != 'Malaysia'"},
+    {"filter": 
+      "datum.StateCountry == 'Johor' || datum.StateCountry == 'Kedah' || datum.StateCountry == 'Kelantan' || datum.StateCountry == 'Melaka' || datum.StateCountry == 'Negeri Sembilan' || datum.StateCountry == 'Pahang' || datum.StateCountry == 'Pulau Pinang' || datum.StateCountry == 'Perak'"},
     {
       "calculate": "{'Urban': '🏙️', 'Rural': '🏠'}[datum.Stratum]",
       "as": "emoji"

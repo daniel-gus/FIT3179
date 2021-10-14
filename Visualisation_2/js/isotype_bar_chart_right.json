@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "title": {
+    "text": "Employed Population by Stratum",
+    "offset": 15,
+    "align": "center",
+    "fontSize": 15
+  },
+  "config": {"view": {"stroke": ""}},
+  "width": 200,
+  "height": 75,
+  "data": {
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_stratum_and_state_1982_to_2020.csv"
+  },
+  "transform": [
+    {"filter": "datum.StateCountry != 'Malaysia'"},
+    {"filter": 
+      "datum.StateCountry == 'Perlis' || datum.StateCountry == 'Selangor' || datum.StateCountry == 'Terengganu' || datum.StateCountry == 'Sabah' || datum.StateCountry == 'Sarawak' || datum.StateCountry == 'W.P. Kuala Lumpur' || datum.StateCountry == 'W.P Labuan' || datum.StateCountry == 'W.P.Putrajaya'"},
+    {
+      "calculate": "{'Urban': '🏙️', 'Rural': '🏠'}[datum.Stratum]",
+      "as": "emoji"
+    },
+    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["Year","StateCountry", "Stratum"]}
+  ],
+  "mark": {"type": "text", "baseline": "middle"},
+  "encoding": {
+    "x": {"field": "rank", "type": "ordinal", "axis": null},
+    "y": {"field": "Stratum", "type": "nominal", "axis": null, "sort": null},
+    "row": {"field": "StateCountry", "type": "nominal", "header": {"title": ""}},
+    "text": {"field": "emoji", "type": "nominal"},
+    "size": {"value": 25},
+    "tooltip": [
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "StateCountry", "type": "nominal", "title": "State"},
+      {"field": "Stratum", "type": "nominal", "title": "Stratum"}
+    ]
+      
+    
+  }
+}
