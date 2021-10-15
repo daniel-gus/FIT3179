@@ -4,7 +4,7 @@
   "height": 550,
   "projection": {"type": "equirectangular"},
   "data": {
-    "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/js/malaysia_map.json",
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/js/malaysia_map_topojson.json",
     "format": {"type": "topojson", "feature": "malaysia_map"}
   },
   "transform": [
