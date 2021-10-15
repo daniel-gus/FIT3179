@@ -1,69 +1,54 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employed Population in Malaysia",
-  "width": 700,
-  "height": 500,
+  "width": 880,
+  "height": 550,
+  "projection": {"type": "equirectangular"},
   "data": {
-    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/js/state_boundaries_topojson.json",
-    "format": {
-          "type": "topojson",
-          "feature": "state_boundaries"
-        }
+    "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/js/malaysia_map.json",
+    "format": {"type": "topojson", "feature": "malaysia_map"}
   },
-  "params":[
-    {
-        "name": "year_selection",
-        "value": 2020,
-        "bind":{
-            "input": "select",
-            "options":[
-                2020,
-                2010,
-                2000,
-                1990,
-                1982
-            ],
-            "labels":[
-                "2020",
-                "2010",
-                "2000",
-                "1990",
-                "1982"
-            ],
-            "name": "Year Selection: "
-        }
-    }
-],
   "transform": [
-    {"filter": "datum.Year == year_selection"},
-    {"filter": "datum.state != 'Malaysia'"},
     {
-      "lookup": "properties.state",
+      "lookup": "properties.locname",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
+          "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/cases_state_sum.csv"
         },
         "key": "state",
-        "fields": ["Employed"]
+        "fields": ["cases_new", "population"]
       }
+    },
+    {
+      "calculate": "datum.cases_new/datum.population * 1000",
+      "as": "New cases per 1,000 population"
     }
   ],
-  "projection": {
-    "type": "equirectangular"
-  },
-  "mark": {
-    "type": "geoshape"
-    },
+  "mark": {"type": "geoshape", "stroke": "#212121", "strokeWidth": 1},
   "encoding": {
     "color": {
-      "field": "Employed",
+      "field": "New cases per 1,000 population",
       "type": "quantitative",
-      "scale": {"type": "log"}
+      "scale": {
+        "type": "linear",
+        "domain": [1, 20, 50, 100],
+        "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
+      },
+      "legend": {
+        "direction": "horizontal",
+        "gradientLength": 180,
+        "orient": "none",
+        "legendX": 30,
+        "legendY": 80
+      }
     },
     "tooltip": [
-      {"field": "properties.state", "type": "nominal", "title": "state"},
-      {"field": "Employed", "type": "quantitative"}
+      {"field": "properties.locname", "type": "nominal", "title": "State"},
+      {
+        "field": "New cases per 1,000 population",
+        "type": "quantitative",
+        "format": ".1f"
+      }
     ]
-  }
-
+  },
+  "config": {"style": {"cell": {"stroke": "transparent"}}}
 }
