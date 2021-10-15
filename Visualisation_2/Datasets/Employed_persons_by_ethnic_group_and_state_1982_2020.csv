@@ -1,4 +1,4 @@
-﻿_id,Year,State,Citizen Category,Ethnic Group,Value ('000)
+﻿_id,Year,State,CitizenCategory,EthnicGroup,Value
 1,2020,MALAYSIA,Total of employed,N.A,14956.7
 2,2020,MALAYSIA,Malaysian citizens,Total Malaysian citizens,12865.9
 3,2020,MALAYSIA,Malaysian citizens,Bumiputera,8540.2
