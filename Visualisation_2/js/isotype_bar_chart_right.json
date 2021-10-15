@@ -1,11 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-  "title": {
-    "text": "Employed Population by Stratum",
-    "offset": 15,
-    "align": "center",
-    "fontSize": 15
-  },
   "config": {"view": {"stroke": ""}},
   "width": 200,
   "height": 75,

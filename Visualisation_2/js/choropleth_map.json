@@ -4,34 +4,58 @@
   "height": 550,
   "projection": {"type": "equirectangular"},
   "data": {
-    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/js/malaysia_map_topojson.json",
-    "format": {"type": "topojson", "feature": "malaysia_map"}
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
   },
-  "transform": [
+  "params":[
     {
-      "lookup": "properties.locname",
+        "name": "year_selection",
+        "value": 2020,
+        "bind":{
+            "input": "select",
+            "options":[
+                2020,
+                2010,
+                2000,
+                1990,
+                1982
+            ],
+            "labels":[
+                "2020",
+                "2010",
+                "2000",
+                "1990",
+                "1982"
+            ],
+            "name": "Year Selection: "
+        }
+    }
+],
+  
+  "transform": [
+    {"filter": "datum.Year == year_selection"},
+    {"filter": "datum.state != 'Malaysia'"},
+    {
+      "lookup": "state",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/js/malaysia_map_topojson.json",
+          "format": {"type": "topojson", "feature": "malaysia_map"}
         },
-        "key": "state",
-        "fields": ["cases_new", "population"]
-      }
-    },
-    {
-      "calculate": "datum.cases_new/datum.population * 1000",
-      "as": "New cases per 1,000 population"
+        "key": "properties.locname"
+      },
+      "as": "geo"
     }
   ],
   "mark": {"type": "geoshape", "stroke": "#212121", "strokeWidth": 1},
   "encoding": {
+    "shape":{"field": "geo", "type": "geojson"},
     "color": {
-      "field": "New cases per 1,000 population",
+      "field": "Employed",
       "type": "quantitative",
       "scale": {
         "type": "linear",
-        "domain": [1, 20, 50, 100],
-        "range": ["#fef0d9", "#fdcc8a", "#fc8d59", "#e34a33", "#b30000"]
+        "domain": [1, 100, 500, 1000, 1500],
+        "range": ["#ecdffe", "#e1b0ff", "#c87cff", "#560061", "#400e63"]
       },
       "legend": {
         "direction": "horizontal",
@@ -42,10 +66,12 @@
       }
     },
     "tooltip": [
-      {"field": "properties.locname", "type": "nominal", "title": "State"},
+      {"field": "Year", "type": "ordinal", "title": "Year"},
+      {"field": "state", "type": "nominal", "title": "State"},
       {
-        "field": "New cases per 1,000 population",
+        "field": "Employed",
         "type": "quantitative",
+        "title": "Employed Population ('000)",
         "format": ".1f"
       }
     ]

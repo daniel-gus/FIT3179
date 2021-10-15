@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Population Pyramid of Employed Persons by Gender",
     "data": {
         "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
     },
@@ -31,7 +30,6 @@
     "transform": [
         {"filter": "datum.Year == year_selection"},
         {"filter": "datum.state != 'Malaysia'"},
-        {"calculate": "datum.Employed * 1000" , "as": "Employed"},
         {"calculate": "datum.Sex == 'Male' ? 'Male' : 'Female'", "as": "gender"}
     ],
     "spacing": 0,
@@ -47,13 +45,13 @@
             },
             "x": {
                 "aggregate": "sum", "field": "Employed",
-                "title": "population",
+                "title": "Employed Female Population",
                 "axis": {"format": "s"},
                 "sort": "descending"
             },
             "color": {
                 "field": "gender",
-                "scale": {"range": ["#675193", "#ca8861"]},
+                "scale": {"range": ["#c4ddff", "#66abf9"]},
                 "legend": null
             },
             "tooltip": [
@@ -69,7 +67,7 @@
                 },
                 {
                     "field": "Employed",
-                    "title": "Number of Employed Female Population",
+                    "title": "Employed Population ('000)",
                     "type": "quantitative",
                     "format": ","
                 }
@@ -99,7 +97,7 @@
         },
         "x": {
             "aggregate": "sum", "field": "Employed",
-            "title": "population",
+            "title": "Employed Male Population",
             "axis": {"format": "s"}
         },
         "color": {
@@ -119,7 +117,7 @@
             },
             {
                 "field": "Employed",
-                "title": "Number of Employed Male Population",
+                "title": "Employed Population ('000)",
                 "type": "quantitative",
                 "format": ","
             }

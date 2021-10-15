@@ -10,13 +10,13 @@
     ],
     "encoding": {
       "x": {
-        "field": "MaritalStatus", "type": "nominal",
+        "field": "MaritalStatus", "type": "nominal", "title": "Marital Status",
         "scale": {"zero": false, "nice": false}
       },
       "y": {
         "field": "Person", "type": "quantitative",
         "scale": {"domain": [0,1000000]},
-        "axis": {"title": "Person"}
+        "axis": {"title": "Employed Population"}
       }
     },
     "layer": [{

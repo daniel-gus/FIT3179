@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300,
+    "width": 350,
     "height": 300,
     "data": {
         "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_age_group_and_state_1982_2020.csv"
@@ -34,9 +34,6 @@
         {"filter": "datum.AgeGroup != 'Total'"},
         {"filter": "datum.CountryState != 'MALAYSIA'"}
     ],
-
-
-    "title": "Employed Population by Age Group and State",
     "config": {
         "view": {
             "strokeWidth": 0,
@@ -51,8 +48,8 @@
         "x": {
             "field": "CountryState",
             "type": "nominal",
-            "title": "CountryState",
-            "scale": {"domain": ["MALAYSIA", "JOHOR", "KEDAH", "MELAKA", "NEGERI SEMBILAN", "PAHANG", "PULAU PINANG", "PERAK", "PERLIS", "SELANGOR", "TERENGGANU", "SABAH", "SARAWAK","W.P.KUALA LUMPUR", "W.P.LABUAN", "W.P.PUTRAJAYA"]},
+            "title": "State",
+            "scale": {"domain": ["JOHOR", "KEDAH", "MELAKA", "NEGERI SEMBILAN", "PAHANG", "PULAU PINANG", "PERAK", "PERLIS", "SELANGOR", "TERENGGANU", "SABAH", "SARAWAK","W.P.KUALA LUMPUR", "W.P.LABUAN", "W.P.PUTRAJAYA"]},
             "axis": {"labelAngle": -45}
         },
         "y": {
@@ -66,7 +63,7 @@
             "type": "quantitative",
             "scale": {"type": "log"},
             "legend": {
-                "title": "Employed"
+                "title": "Employed ('000)"
             }        
         },
         "tooltip": [

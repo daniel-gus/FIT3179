@@ -23,13 +23,18 @@
     h1{
       font-weight: 750;
       text-align: center;
-      font-size: 40px;
+      font-size: 55px;
       font-family : Helvetica;
     }
     h2{
       font-weight: 500;
       text-align: center;
       font-size: 25px;
+    }
+    h3{
+      font-weight: 500;
+      text-align: center;
+      font-size: 40px;
     }
     t1{
      text-align: center;
@@ -39,7 +44,7 @@
      }
      .page{
        width: 1500px; 
-       height: 3150px;   
+       height: 3300px;   
        background-color: #fefcf8;   
        margin: auto;
        padding: 50px;
@@ -58,12 +63,20 @@
       background-color: #faf4e7;  
       margin-top:0px;
     }    
+    .description-header{
+      margin-top:0px;
+    }    
     .description-right {
       padding-left: 20px;
       text-align: center;
     }
     .description-left{
       padding-right: 20px;
+      text-align: center;
+    }
+    .description-middle {
+      padding-left: 5px;
+      padding-right: 5px;
       text-align: center;
     }
     .pure-g{
@@ -94,8 +107,8 @@
    <!-- pure grid group -->
    <div class="pure-g">
       <div class="pure-u-1-1">
-        <div class="title description-left">
-          <h2>ACROSS THE YEARS</h2>
+        <div class="title description-header">
+          <h3>ACROSS THE YEARS</h3>
         </div>    
       </div>
   </div>
@@ -105,7 +118,7 @@
    <!-- pure grid group -->
    <div class="pure-g">
     <div class="pure-u-1-1">
-      <div class="description description-left">
+      <div class="description description-header">
         <h2><i>MAP OF MALAYSIA</i></h2>
         <p>This is Malaysia's map along with its states.</p>
       </div>
@@ -144,7 +157,7 @@
 <!-- pure grid group -->
 <div class="pure-g">
   <div class="pure-u-1-1">
-    <div class="description description-left">
+    <div class="description description-header">
       <h2><i>STRATUM</i></h2>
       <p>Employed Population by Stratum</p>
     </div>
@@ -154,7 +167,8 @@
     </div>
     <div class="pure-u-1-2">
       <div id="isotype_bar_chart_right" class="vis-container"></div>
-  </div>
+  
+    </div>
 
   
 </div>
@@ -164,8 +178,9 @@
 <!-- pure grid group -->
 <div class="pure-g">
   <div class="pure-u-1-1">
-    <div class="title description-left">
-      <h2>ACROSS THE STATES</h2>
+    <hr>
+    <div class="title description-header">
+      <h3>ACROSS THE STATES</h3>
     </div>    
   </div>
 </div>
@@ -185,7 +200,7 @@
   </div>
   
   <div class="pure-u-1-3">
-    <div class="description description-right">
+    <div class="description description-middle">
         <h2><i>MARITAL STATUS</i></h2>
         <p>Employed Population by Marital Status</p>
       </div>
