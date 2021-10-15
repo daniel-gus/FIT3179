@@ -12,7 +12,7 @@
       "lookup": "properties.locname",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/johanazlan/Data-Visualization-Assignment-2/main/data/cases_state_sum.csv"
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
         },
         "key": "state",
         "fields": ["cases_new", "population"]
