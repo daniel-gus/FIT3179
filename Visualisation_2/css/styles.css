@@ -1,8 +1,8 @@
 #choropleth_map {
 	top:5px;
-	left: 175px;
-	/*height: 1000px;
-	width: 800px;*/
+	left: 360px;
+	height: 500px;
+	width: 800px;
 }
 
 #population_pyramid {

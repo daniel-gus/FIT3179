@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Employed Population in Malaysia",
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/js/state_boundaries_topojson.json",
+    "format": {
+          "type": "topojson",
+          "feature": "state_boundaries"
+        }
+  },
+  "params":[
+    {
+        "name": "year_selection",
+        "value": 2020,
+        "bind":{
+            "input": "select",
+            "options":[
+                2020,
+                2010,
+                2000,
+                1990,
+                1982
+            ],
+            "labels":[
+                "2020",
+                "2010",
+                "2000",
+                "1990",
+                "1982"
+            ],
+            "name": "Year Selection: "
+        }
+    }
+],
+  "transform": [
+    {"filter": "datum.Year == year_selection"},
+    {"filter": "datum.state != 'Malaysia'"},
+    {
+      "lookup": "properties.state",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_sex_and_state_1982_to_2020_Malaysia.csv"
+        },
+        "key": "state",
+        "fields": ["Employed"]
+      }
+    }
+  ],
+  "projection": {
+    "type": "equirectangular"
+  },
+  "mark": {
+    "type": "geoshape"
+    },
+  "encoding": {
+    "color": {
+      "field": "Employed",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "tooltip": [
+      {"field": "properties.state", "type": "nominal", "title": "state"},
+      {"field": "Employed", "type": "quantitative"}
+    ]
+  }
+
+}
