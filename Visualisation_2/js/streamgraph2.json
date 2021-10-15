@@ -95,6 +95,7 @@
       "tooltip": [
         {
             "field": "Year",
+            "timeUnit": "year",
             "title": "Year",
             "type": "ordinal"
         },

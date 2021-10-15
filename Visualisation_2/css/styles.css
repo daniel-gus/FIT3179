@@ -1,8 +1,58 @@
+#choropleth_map {
+	top:5px;
+	left: 175px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
 #population_pyramid {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
+	top:20px;
+	left: 125px;
 	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#heatmap {
+	top:5px;
+	left: 175px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#isotype_bar_chart_left {
+	top:20px;
+	left: 125px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#isotype_bar_chart_right {
+	top:20px;
+	left: 125px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#streamgraph {
+	top:5px;
+	left: 28px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#horizon_graph {
+	top:20px;
+	left: 75px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+#streamgraph2 {
+	top:5px;
+	left: 40px;
 	/*height: 1000px;
 	width: 800px;*/
 }
