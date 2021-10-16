@@ -3,6 +3,7 @@
     "description": "Horizon Graph with 2 layers. (See https://idl.cs.washington.edu/papers/horizon/ for more details on Horizon Graphs.)",
     "width": 300,
     "height": 300,
+    "background": "#fefcf8",
     "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_marital_status_and_state_Malaysia.csv"},
     "transform": [
         {"filter": "datum.Year == 2020"},

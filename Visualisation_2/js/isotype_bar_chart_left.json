@@ -3,6 +3,7 @@
   "config": {"view": {"stroke": ""}},
   "width": 200,
   "height": 75,
+  "background": "#fefcf8",
   "data": {
     "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_stratum_and_state_1982_to_2020.csv"
   },

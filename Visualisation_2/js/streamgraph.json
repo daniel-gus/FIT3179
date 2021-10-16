@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 300, "height": 300,
+    "width": 300, "height": 300, "background": "#fefcf8",
     "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_educational_attainment_and_state_Malaysia.csv"},
     "params":[
         {

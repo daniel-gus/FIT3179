@@ -1,0 +1,128 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_ethnic_group_and_state_1982_2020.csv"
+  },
+  "width": 400,
+  "height": 300,
+  "background": "#fefcf8",
+  "params":[
+    {
+        "name": "state_selection",
+        "value": "MALAYSIA",
+        "bind":{
+            "input": "select",
+            "options":[
+                "MALAYSIA",
+                "JOHOR",
+                "KEDAH",
+                "KELANTAN",
+                "MELAKA",
+                "N.SEMBILAN",
+                "PAHANG",
+                "P.PINANG",
+                "PERAK",
+                "PERLIS",
+                "SELANGOR",
+                "TERENGGANU",
+                "SABAH",
+                "SARAWAK",
+                "W.P.KUALA LUMPUR",
+                "W.P.LABUAN",
+                "W.P.PUTRAJAYA"
+            ],
+            "labels":[
+                "MALAYSIA",
+                "JOHOR",
+                "KEDAH",
+                "KELANTAN",
+                "MELAKA",
+                "N.SEMBILAN",
+                "PAHANG",
+                "P.PINANG",
+                "PERAK",
+                "PERLIS",
+                "SELANGOR",
+                "TERENGGANU",
+                "SABAH",
+                "SARAWAK",
+                "W.P.KUALA LUMPUR",
+                "W.P.LABUAN",
+                "W.P.PUTRAJAYA"
+            ],
+            "name": "State Selection: "
+        }
+    },
+    {
+            "name": "year_selection",
+            "value": 2020,
+            "bind":{
+                "input": "select",
+                "options":[
+                    2020,
+                    2010,
+                    2000,
+                    1990,
+                    1982
+                ],
+                "labels":[
+                    "2020",
+                    "2010",
+                    "2000",
+                    "1990",
+                    "1982"
+                ],
+                "name": "Year Selection: "
+            }
+        }
+],
+  "transform": [
+    {"filter": "datum.Year == year_selection"},
+    {"filter": "datum.State == state_selection"},
+
+    {"filter": "datum.EthnicGroup == 'Bumiputera' || datum.EthnicGroup == 'Chinese' || datum.EthnicGroup == 'Indians' || datum.EthnicGroup == 'Others'"}
+
+  ],
+  "mark": {"type": "arc", "innerRadius": 70},
+  "selection": {
+    "EthnicGroup": {
+        "type": "single",
+        "fields": ["EthnicGroup"],
+        "on": "mouseover",
+        "bind": "legend"
+    }
+  },
+  "encoding": {
+    "theta": {"field": "Value", "type": "quantitative"},
+    
+    "color": {
+      "field":"EthnicGroup", 
+        "type": "nominal",
+        "scale":{
+          "domain": [
+            "Bumiputera",
+            "Chinese",
+            "Indians",
+            "Others"
+          ],
+          "range": [
+            "#a70000",
+            "#ff0000",
+            "#ff7b7b",
+            "#ffbaba"
+          ]
+        }
+    },
+    "opacity": {
+      "condition": {"selection": "EthnicGroup", "value": 1},
+      "value": 0.15
+    },
+    "tooltip": [
+      {"field": "Year", "type": "nominal"},
+      {"field": "State", "type": "nominal", "title": "State"},
+      {"field": "EthnicGroup", "type": "nominal", "title": "Ethnic Group"},
+      {"field": "Value", "type": "quantitative", "title": "Employed Population","format": "0.1f"}
+    ]
+  },
+  "config": {"view": {"stroke": "transparent"}}
+}
