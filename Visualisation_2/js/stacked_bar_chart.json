@@ -1,0 +1,92 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_stratum_and_state_1982_to_2020.csv"
+    },
+    "params":[
+      {
+          "name": "state_selection",
+          "value": "Malaysia",
+          "bind":{
+              "input": "select",
+              "options":[
+                  "Malaysia",
+                  "Johor",
+                  "Kedah",
+                  "Kelantan",
+                  "Melaka",
+                  "Negeri Sembilan",
+                  "Pahang",
+                  "Pulau Pinang",
+                  "Perak",
+                  "Perlis",
+                  "Selangor",
+                  "Terengganu",
+                  "Sabah",
+                  "Sarawak",
+                  "W.P. Kuala Lumpur",
+                  "W.P Labuan",
+                  "W.P.Putrajaya"
+              ],
+              "labels":[
+                  "MALAYSIA",
+                  "JOHOR",
+                  "KEDAH",
+                  "KELANTAN",
+                  "MELAKA",
+                  "N.SEMBILAN",
+                  "PAHANG",
+                  "P.PINANG",
+                  "PERAK",
+                  "PERLIS",
+                  "SELANGOR",
+                  "TERENGGANU",
+                  "SABAH",
+                  "SARAWAK",
+                  "W.P.KUALA LUMPUR",
+                  "W.P.LABUAN",
+                  "W.P.PUTRAJAYA"
+              ],
+              "name": "State Selection: "
+          }
+      }
+  ],
+    "transform": [
+        {"filter": "datum.StateCountry ==  state_selection"}
+
+    ],
+    "mark": {"type": "bar"},
+    "encoding": {
+      "x": {
+        "timeUnit": "year",
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis": {"labelAngle": 0, "labelSeparation": 5}
+      },
+      "y": {
+        "field": "Employed",
+        "title": "Employed Population ('000)",
+        "axis": {"gridWidth": 0.5, "tickCount": 6},
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "Stratum",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Urban", "Rural"],
+          "range": ["#ff8100", "#ffeedd"]
+        },
+        "legend": {"title": "Stratum", "symbolType": "circle"}
+      },
+      "tooltip": [
+        {"field": "Year", "timeUnit": "year", "title": "Year"},
+        {"field": "StateCountry", "title": "State / Country"},
+        {"field": "Stratum", "title": "Stratum"},
+        {"field": "Employed", "type": "quantitative", "title": "Employed Population ('000)"}
+      ]
+    },
+    "config": {"style": {"cell": {"stroke": "transparent"}}}
+  }

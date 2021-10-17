@@ -7,7 +7,32 @@
   "data": {
     "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_person_by_stratum_and_state_1982_to_2020.csv"
   },
+  "params":[
+    {
+        "name": "year_selection",
+        "value": 2020,
+        "bind":{
+            "input": "select",
+            "options":[
+                2020,
+                2010,
+                2000,
+                1990,
+                1982
+            ],
+            "labels":[
+                "2020",
+                "2010",
+                "2000",
+                "1990",
+                "1982"
+            ],
+            "name": "Year Selection: "
+        }
+    }
+  ],
   "transform": [
+    {"filter": "datum.Year == year_selection"},
     {"filter": "datum.StateCountry != 'Malaysia'"},
     {"filter": 
       "datum.StateCountry == 'Johor' || datum.StateCountry == 'Kedah' || datum.StateCountry == 'Kelantan' || datum.StateCountry == 'Melaka' || datum.StateCountry == 'Negeri Sembilan' || datum.StateCountry == 'Pahang' || datum.StateCountry == 'Pulau Pinang' || datum.StateCountry == 'Perak'"},
@@ -15,7 +40,9 @@
       "calculate": "{'Urban': '🏙️', 'Rural': '🏠'}[datum.Stratum]",
       "as": "emoji"
     },
-    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["Year","StateCountry", "Stratum"]}
+    {"calculate": "ceil(datum._id/50)", "as": "col"},
+    {"calculate": "datum.id - datum.Person * 50", "as": "row"},
+    {"window": [{"op": "rank", "as": "rank"}], "groupby": ["StateCountry", "Stratum"]}
   ],
   "mark": {"type": "text", "baseline": "middle"},
   "encoding": {
@@ -27,7 +54,9 @@
     "tooltip": [
       {"field": "Year", "type": "ordinal", "title": "Year"},
       {"field": "StateCountry", "type": "nominal", "title": "State"},
-      {"field": "Stratum", "type": "nominal", "title": "Stratum"}
+      {"field": "Stratum", "type": "nominal", "title": "Stratum"},
+      {"field": "Employed", "type": "quantitative", "title": "Employed Population ('000)"}
+
     ]
       
     

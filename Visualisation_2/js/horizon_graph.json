@@ -1,39 +1,103 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Horizon Graph with 2 layers. (See https://idl.cs.washington.edu/papers/horizon/ for more details on Horizon Graphs.)",
-    "width": 300,
-    "height": 300,
-    "background": "#fefcf8",
-    "data": {"url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_marital_status_and_state_Malaysia.csv"},
-    "transform": [
-        {"filter": "datum.Year == 2020"},
-        {"filter": "datum.State == 'JOHOR'"}
-    ],
-    "encoding": {
-      "x": {
-        "field": "MaritalStatus", "type": "nominal", "title": "Marital Status",
-        "scale": {"zero": false, "nice": false}
-      },
-      "y": {
-        "field": "Person", "type": "quantitative",
-        "scale": {"domain": [0,1000000]},
-        "axis": {"title": "Employed Population"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Horizon Graph with 2 layers. (See https://idl.cs.washington.edu/papers/horizon/ for more details on Horizon Graphs.)",
+  "width": 300,
+  "height": 300,
+  "background": "#fefcf8",
+  "data": {
+    "url": "https://raw.githubusercontent.com/daniel-gus/FIT3179/master/Visualisation_2/Datasets/Employed_persons_by_marital_status_and_state_Malaysia.csv"
+  },
+
+  "params":[
+    {
+        "name": "state_selection",
+        "value": "JOHOR",
+        "bind":{
+            "input": "select",
+            "options":[
+                "JOHOR",
+                "KEDAH",
+                "KELANTAN",
+                "MELAKA",
+                "N.SEMBILAN",
+                "PAHANG",
+                "P.PINANG",
+                "PERAK",
+                "PERLIS",
+                "SELANGOR",
+                "TERENGGANU",
+                "SABAH",
+                "SARAWAK",
+                "W.P.KUALA LUMPUR",
+                "W.P.LABUAN",
+                "W.P.PUTRAJAYA"
+            ],
+            "labels":[
+                "JOHOR",
+                "KEDAH",
+                "KELANTAN",
+                "MELAKA",
+                "N.SEMBILAN",
+                "PAHANG",
+                "P.PINANG",
+                "PERAK",
+                "PERLIS",
+                "SELANGOR",
+                "TERENGGANU",
+                "SABAH",
+                "SARAWAK",
+                "W.P.KUALA LUMPUR",
+                "W.P.LABUAN",
+                "W.P.PUTRAJAYA"
+            ],
+            "name": "State Selection: "
+        }
+    }
+],
+  "transform": [
+    {"filter": "datum.Year == 2020"},
+    {"filter": "datum.State != 'MALAYSIA'"},
+    {"filter": "datum.State == state_selection"}
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "MaritalStatus",
+      "type": "nominal",
+      "title": "Marital Status",
+      "scale": {"zero": false, "nice": false}
+    },
+    "y": {
+      "field": "Person",
+      "type": "quantitative",
+      "scale": {"domain": [0, 800]},
+      "axis": {"title": "Employed Population ('000)"}
+    }
+    
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "clip": true,
+        "orient": "vertical",
+        "opacity": 0.6,
+        "color": "#ffd299"
       }
     },
-    "layer": [{
-      "mark": {"type": "area", "clip": true, "orient": "vertical", "opacity": 0.6}
-    }, {
-      "transform": [{"calculate": "datum.Person - 50", "as": "ny"}],
-      "mark": {"type": "area", "clip": true, "orient": "vertical"},
+    {
+      "transform": [{"calculate": "datum.Person - 500", "as": "ny"}],
+      "mark": {"type": "area", "clip": true, "orient": "vertical", "color": "#ff8100"},
       "encoding": {
         "y": {
-          "field": "ny", "type": "quantitative",
-          "scale": {"domain": [0,1000000]}
+          "field": "ny",
+          "type": "quantitative",
+          "scale": {"domain": [0, 300]}
         },
         "opacity": {"value": 0.3}
       }
-    }],
-    "config": {
-      "area": {"interpolate": "monotone"}
     }
-  }
+  ],
+  "config": {"area": {"interpolate": "monotone"}}
+}
