@@ -121,7 +121,7 @@
       {"field": "Year", "type": "nominal"},
       {"field": "State", "type": "nominal", "title": "State"},
       {"field": "EthnicGroup", "type": "nominal", "title": "Ethnic Group"},
-      {"field": "Value", "type": "quantitative", "title": "Employed Population","format": "0.1f"}
+      {"field": "Value", "type": "quantitative", "title": "Employed Population ('000)"}
     ]
   },
   "config": {"view": {"stroke": "transparent"}}
