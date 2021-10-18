@@ -9,15 +9,23 @@
 	top:20px;
 	left: 125px;
 	right: 100px;
-	height: 450px;
+	height: 490px;
 	width: 540px;
 }
 
 #heatmap {
 	top:5px;
 	left: 125px;
-	height: 450px;
+	height: 490px;
 	width: 550px;
+}
+
+#stacked_bar_chart {
+	top:20px;
+	left: 335px;
+	right: 100px;
+	height: 500px;
+	width: 870px;
 }
 
 #isotype_bar_chart_left {
@@ -46,7 +54,7 @@
 #horizon_graph {
 	top:20px;
 	left: 55px;
-	height: 500px;
+	height: 600px;
 	width: 410px;
 }
 

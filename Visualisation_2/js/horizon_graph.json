@@ -83,12 +83,12 @@
         "clip": true,
         "orient": "vertical",
         "opacity": 0.6,
-        "color": "#ffd299"
+        "color": "#f8ed62"
       }
     },
     {
       "transform": [{"calculate": "datum.Person - 500", "as": "ny"}],
-      "mark": {"type": "area", "clip": true, "orient": "vertical", "color": "#ff8100"},
+      "mark": {"type": "area", "clip": true, "orient": "vertical", "color": "#dab600"},
       "encoding": {
         "y": {
           "field": "ny",

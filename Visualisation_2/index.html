@@ -44,7 +44,7 @@
      }
      .page{
        width: 1500px; 
-       height: 3300px;   
+       height: 3200px;   
        background-color: #fefcf8;   
        margin: auto;
        padding: 50px;
@@ -154,26 +154,6 @@
   </div>
 <!-- end pure grid group -->
 
-<!-- pure grid group -->
-<div class="pure-g">
-  <div class="pure-u-1-1">
-    <div class="description description-header">
-      <h2><i>STRATUM</i></h2>
-      <p>Employed Population by Stratum</p>
-    </div>
-  </div>
-    <div class="pure-u-1-2">
-      <div id="isotype_bar_chart_left" class="vis-container"></div>
-    </div>
-    <div class="pure-u-1-2">
-      <div id="isotype_bar_chart_right" class="vis-container"></div>
-  
-    </div>
-
-  
-</div>
-<!-- end pure grid group -->
-
 
 <!-- pure grid group -->
 <div class="pure-g">
@@ -183,6 +163,20 @@
       <h3>ACROSS THE STATES</h3>
     </div>    
   </div>
+</div>
+<!-- end pure grid group -->
+
+<!-- pure grid group -->
+<div class="pure-g">
+  <div class="pure-u-1-1">
+    <div class="description description-header">
+      <h2><i>STRATUM</i></h2>
+      <p>Employed Population by Stratum</p>
+    </div>
+  </div>
+    <div class="pure-u-1-1">
+      <div id="stacked_bar_chart" class="vis-container"></div>
+    </div>
 </div>
 <!-- end pure grid group -->
 
@@ -237,10 +231,9 @@
   var specVis2 = "js/choropleth_map.json";
   var specVis3 = "js/heatmap.json";
   var specVis4 = "js/stacked_bar_chart.json";
-  var specVis5 = "js/isotype_bar_chart_right.json";
-  var specVis6 = "js/streamgraph.json";
-  var specVis7 = "js/horizon_graph.json";
-  var specVis8 = "js/donut_chart.json";
+  var specVis5 = "js/streamgraph.json";
+  var specVis6 = "js/horizon_graph.json";
+  var specVis7 = "js/donut_chart.json";
 
 
   vegaEmbed('#choropleth_map', specVis2).then(function(result) {
@@ -252,19 +245,16 @@
   vegaEmbed('#heatmap', specVis3).then(function(result) {
   }).catch(console.error);
 
-  vegaEmbed('#isotype_bar_chart_left', specVis4).then(function(result) {
+  vegaEmbed('#stacked_bar_chart', specVis4).then(function(result) {
   }).catch(console.error);
 
-  vegaEmbed('#isotype_bar_chart_right', specVis5).then(function(result) {
-  }).catch(console.error);
-  
-  vegaEmbed('#streamgraph', specVis6).then(function(result) {
+  vegaEmbed('#streamgraph', specVis5).then(function(result) {
   }).catch(console.error);  
 
-  vegaEmbed('#horizon_graph', specVis7).then(function(result) {
+  vegaEmbed('#horizon_graph', specVis6).then(function(result) {
   }).catch(console.error);
 
-  vegaEmbed('#donut_chart', specVis8).then(function(result) {
+  vegaEmbed('#donut_chart', specVis7).then(function(result) {
   }).catch(console.error);
 
 </script>
